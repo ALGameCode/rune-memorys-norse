@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8908d75415bf014188954bd59f3f4ed, type: 3}
+  m_Name: LevelDifficultyConfiguration
+  m_EditorClassIdentifier: 
+  difficulties:
+  - levelDifficultyTag: 0
+    difficultyDescriptionName: Easy
+    quantityPieces: 12
+    startingTimeShowRunes: 10
+    gridPaddingLeft: 50
+    gridPaddingRight: 50
+    gridPaddingTop: 20
+    gridPaddingBotton: 10
+    gridCellSizeX: 162
+    gridCellSizeY: 270
+    gridSpacingX: 60
+    gridSpacingY: 60
+  - levelDifficultyTag: 1
+    difficultyDescriptionName: Medium
+    quantityPieces: 20
+    startingTimeShowRunes: 10
+    gridPaddingLeft: 30
+    gridPaddingRight: 30
+    gridPaddingTop: 10
+    gridPaddingBotton: 10
+    gridCellSizeX: 162
+    gridCellSizeY: 270
+    gridSpacingX: 50
+    gridSpacingY: 50
+  - levelDifficultyTag: 2
+    difficultyDescriptionName: Hard
+    quantityPieces: 30
+    startingTimeShowRunes: 8
+    gridPaddingLeft: 50
+    gridPaddingRight: 50
+    gridPaddingTop: 20
+    gridPaddingBotton: 10
+    gridCellSizeX: 108
+    gridCellSizeY: 180
+    gridSpacingX: 40
+    gridSpacingY: 40
+  energyEasy: 100
+  vikingsEasy: 5
+  energyMedium: 100
+  vikingsMedium: 10
+  energyHard: 200
+  vikingsHard: 20

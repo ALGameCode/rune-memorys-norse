@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5522eaaefddec6346896175964e12a1d, type: 3}
+  m_Name: SoundConfiguration
+  m_EditorClassIdentifier: 
+  bgmSongs:
+  - {fileID: 8300000, guid: 1de6a1d67d09e394ea364e823819fa5a, type: 3}
+  - {fileID: 8300000, guid: c6a711d13ad48a946abf1d0a07399f98, type: 3}
+  - {fileID: 8300000, guid: f5727b5a80ad9d5489dfd10d3b3d0c7e, type: 3}
+  - {fileID: 8300000, guid: 37a9ea9fcc38c6849b81968748feaa9d, type: 3}
+  - {fileID: 8300000, guid: cf9a7754fdd6e70439fd2b01e11c9423, type: 3}
+  - {fileID: 8300000, guid: e5d1ced4a2f027a4ea8650a71883f56a, type: 3}
+  - {fileID: 8300000, guid: 733aad2fd3037f947b585daea8c673a9, type: 3}
+  - {fileID: 8300000, guid: fd6f801e789d5eb429ec01192b94557e, type: 3}
+  - {fileID: 8300000, guid: a60f202c912424149adceffff1e1c519, type: 3}
+  - {fileID: 8300000, guid: 894ea061a5bd96346bb55879b3e882ba, type: 3}
+  - {fileID: 8300000, guid: 4288f6e3f8ca1ee4f8103a90ba047fd9, type: 3}
+  - {fileID: 8300000, guid: 7be76fe4b0702b74ab9fd8133f7cff18, type: 3}
+  - {fileID: 8300000, guid: cac542b1998e8834aaa1d41ffe15728d, type: 3}
+  sfxSongs: []
+  volumeBGM: 0.8
+  volumeSFX: 0.5
