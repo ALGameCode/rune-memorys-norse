@@ -9,22 +9,30 @@ using System;
 public class Turn
 {
     private static Turn instance = null;
+
     public TurnStep TurnController { get; private set; }
 
     public float EndTurnTimer = 2f;
 
     public int TotalTurns { get; private set;} = 0;
+    
+    #region Singleton
 
     private Turn(){}
 
-    public static Turn Instance()
+    public static Turn Instance
     {
-        if (instance == null)
+        get
         {
-            instance = new Turn();
+            if (instance == null)
+            {
+                instance = new Turn();
+            }
+            return instance;
         }
-        return instance;
     }
+
+    #endregion
 
     public void StartTurn()
     {

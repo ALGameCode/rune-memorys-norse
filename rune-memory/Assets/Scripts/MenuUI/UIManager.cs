@@ -190,7 +190,7 @@ public class UIManager : MonoBehaviour
         float timer = LevelGameManager.instance.GameTimer;
         minute = (int)timer/60;
         hour = minute/60;
-        second = (int)timer - (minute * 60);
+        second = (int)timer % 60; //- (minute * 60);
         minute = minute - (hour * 60);
 
         timerText.text = $"{hour}:{minute}:{second}";

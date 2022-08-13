@@ -40,3 +40,5 @@ public class PlayerStatus
     public float BestTimeHard { get; set; } = 0f;
     public int BestMinTurnHard { get; set; } = 0;
 }
+
+// TODO: considering future features, is this better as singleton or not?

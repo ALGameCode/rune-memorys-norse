@@ -54,7 +54,7 @@ public class LevelGameManager : MonoBehaviour
     {
         GameTimer += Time.deltaTime;
         StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
-        if(Turn.Instance().TurnController == TurnStep.SECOND_PIECE)
+        if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
         {
             turnTimer += Time.deltaTime;
             EndTurnGame();
@@ -230,7 +230,7 @@ public class LevelGameManager : MonoBehaviour
 
     private void EndTurnGame()
     {
-        if(turnTimer >= Turn.Instance().EndTurnTimer)
+        if(turnTimer >= Turn.Instance.EndTurnTimer)
         {
             bool result = ValidRunes(runeSlotShowerIndex);
             if(result)
@@ -241,7 +241,7 @@ public class LevelGameManager : MonoBehaviour
             {
                 WrongResult();
             }
-            Turn.Instance().NextStep();
+            Turn.Instance.NextStep();
             turnTimer = 0f;
         }
     }

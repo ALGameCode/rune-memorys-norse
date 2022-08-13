@@ -35,7 +35,7 @@ public class Slot : MonoBehaviour
         if(ValidTurnMovement())
         {
             ShowRune();
-            Turn.Instance().NextStep();
+            Turn.Instance.NextStep();
             LevelGameManager.instance.runeSlotShowerIndex.Add(SlotId);
         }
     }
@@ -97,7 +97,7 @@ public class Slot : MonoBehaviour
     {
         if(slotStatus == SlotStatus.HIDDEN)
         {
-            if(Turn.Instance().TurnController != TurnStep.SECOND_PIECE)
+            if(Turn.Instance.TurnController != TurnStep.SECOND_PIECE)
             {
                 return true;
             }

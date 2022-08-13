@@ -14,15 +14,15 @@ public class LevelDifficultyConfiguration : ScriptableObject
 
     [Header("Easy Settings Requirements")]
     public int energyEasy = 10;
-    public int vikingsEasy;
+    public int vikingsEasy = 1;
 
     [Header("Medium Settings Requirements")]
-    public int energyMedium;
-    public int vikingsMedium;
+    public int energyMedium = 10;
+    public int vikingsMedium = 1;
 
     [Header("Hard Settings Requirements")]
-    public int energyHard;
-    public int vikingsHard;
+    public int energyHard = 10;
+    public int vikingsHard = 1;
 
     /// <summary>
     /// Check you have all the requirements to start the difficulty
