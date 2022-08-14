@@ -17,6 +17,8 @@ MonoBehaviour:
     difficultyDescriptionName: Easy
     quantityPieces: 12
     startingTimeShowRunes: 10
+    energyRequirements: 100
+    vikingsRequirements: 5
     gridPaddingLeft: 50
     gridPaddingRight: 50
     gridPaddingTop: 20
@@ -29,6 +31,8 @@ MonoBehaviour:
     difficultyDescriptionName: Medium
     quantityPieces: 20
     startingTimeShowRunes: 10
+    energyRequirements: 100
+    vikingsRequirements: 12
     gridPaddingLeft: 30
     gridPaddingRight: 30
     gridPaddingTop: 10
@@ -41,6 +45,8 @@ MonoBehaviour:
     difficultyDescriptionName: Hard
     quantityPieces: 30
     startingTimeShowRunes: 8
+    energyRequirements: 200
+    vikingsRequirements: 20
     gridPaddingLeft: 50
     gridPaddingRight: 50
     gridPaddingTop: 20
@@ -49,9 +55,3 @@ MonoBehaviour:
     gridCellSizeY: 180
     gridSpacingX: 40
     gridSpacingY: 40
-  energyEasy: 100
-  vikingsEasy: 5
-  energyMedium: 100
-  vikingsMedium: 10
-  energyHard: 200
-  vikingsHard: 20

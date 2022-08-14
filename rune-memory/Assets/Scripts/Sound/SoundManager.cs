@@ -1,3 +1,4 @@
+/// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,88 +7,76 @@ using UnityEngine.Audio;
 /// <summary>
 /// Control and settings for in-game music and sounds
 /// </summary>
-[RequireComponent(typeof(AudioSource))]
-public class SoundManager : MonoBehaviour
+namespace Sound
 {
-    public static SoundManager instance;
-
-    [Header("Sound Settings Object")]
-    public SoundConfiguration soundConfiguration;
-
-    public AudioSource SourcePlay { get; private set; }
-    
-    #region ClassInitialization
-
-    private void Awake() 
+    [RequireComponent(typeof(AudioSource))]
+    public class SoundManager : SingletonMono<SoundManager>
     {
-        if(instance == null)
+        [Header("Sound Settings Object")]
+        public SoundConfiguration soundConfiguration;
+
+        public AudioSource SourcePlay { get; private set; }
+        
+        #region ClassInitialization
+
+        private void Start()
         {
-            instance = this;
+            SourcePlay = GetComponent<AudioSource>();
         }
-        else if (instance != this)
+
+        private void FixedUpdate()
         {
-            Destroy(gameObject);
+            if(!SourcePlay.isPlaying)
+            {
+                ChooseNewSong();
+            }
         }
-        DontDestroyOnLoad(gameObject);
-    }
 
-    private void Start()
-    {
-        SourcePlay = GetComponent<AudioSource>();
-    }
+        #endregion
 
-    private void FixedUpdate()
-    {
-        if(!SourcePlay.isPlaying)
+        /// <summary>
+        /// Choose a random sound from BGM list, and playing that sound
+        /// </summary>
+        private void ChooseNewSong()
         {
-            ChooseNewSong();
+            List<AudioClip> list = soundConfiguration.bgmSongs; //GameManager.instance.BlendList(soundConfiguration.bgmSongs);
+            PlaySong(list[Random.Range(0, list.Count)], soundConfiguration.volumeBGM);
         }
-    }
 
-    #endregion
-
-    /// <summary>
-    /// Choose a random sound from BGM list, and playing that sound
-    /// </summary>
-    private void ChooseNewSong()
-    {
-        List<AudioClip> list = soundConfiguration.bgmSongs; //GameManager.instance.BlendList(soundConfiguration.bgmSongs);
-        PlaySong(list[Random.Range(0, list.Count)], soundConfiguration.volumeBGM);
-    }
-
-    /// <summary>
-    /// Plays a specific audioclip also set the volume
-    /// </summary>
-    /// <param name="audio">Audioclip</param>
-    /// <param name="volume">value if volume</param>
-    private void PlaySong(AudioClip audio, float volume)
-    {
-        SourcePlay.clip = audio;
-        SourcePlay.volume = volume;
-        SourcePlay.Play();
-    }
-
-    /// <summary>
-    /// Stop playing sound from a specific audiosource
-    /// </summary>
-    /// <param name="source">Audio Source to stop</param>
-    private void StopSong(AudioSource source)
-    {
-        source.Stop();
-    }
-
-    /// <summary>
-    /// Mute specific audio source sound
-    /// </summary>
-    public void MuteBackgroundMusic()
-    {
-        if(SourcePlay.mute)
+        /// <summary>
+        /// Plays a specific audioclip also set the volume
+        /// </summary>
+        /// <param name="audio">Audioclip</param>
+        /// <param name="volume">value if volume</param>
+        private void PlaySong(AudioClip audio, float volume)
         {
-            SourcePlay.mute = false;
+            SourcePlay.clip = audio;
+            SourcePlay.volume = volume;
+            SourcePlay.Play();
         }
-        else
+
+        /// <summary>
+        /// Stop playing sound from a specific audiosource
+        /// </summary>
+        /// <param name="source">Audio Source to stop</param>
+        private void StopSong(AudioSource source)
         {
-            SourcePlay.mute = true;
+            source.Stop();
+        }
+
+        /// <summary>
+        /// Mute specific audio source sound
+        /// </summary>
+        public void MuteBackgroundMusic()
+        {
+            if(SourcePlay.mute)
+            {
+                SourcePlay.mute = false;
+            }
+            else
+            {
+                SourcePlay.mute = true;
+            }
         }
     }
 }

@@ -1,41 +1,45 @@
+/// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //using GameAnalyticsSDK;
 
 /// Import Game Analytics
-public class GameAnalyticsManager : MonoBehaviour//, IGameAnalyticsATTListener
+namespace Analytics
 {
-    public static GameAnalyticsManager instance;
-
-    //private bool loaded = false;
-    #region ClassInitialization
-
-    void Awake()
+    public class GameAnalyticsManager : MonoBehaviour //, IGameAnalyticsATTListener
     {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            instance = this;
-            //loaded = false;
-        } 
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+        public static GameAnalyticsManager instance;
 
-    void Start()
-    {
-        /*if(Application.platform == RuntimePlatform.IPhonePlayer)
-        {
-            GameAnalytics.RequestTrackingAuthorization(this);
-        }
-        else
-        {
-            GameAnalytics.Initialize();
-        }*/
-    }
+        //private bool loaded = false;
+        #region ClassInitialization
 
-    #endregion
+        void Awake()
+        {
+            if (instance == null)
+            {
+                DontDestroyOnLoad(gameObject);
+                instance = this;
+                //loaded = false;
+            } 
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        void Start()
+        {
+            /*if(Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                GameAnalytics.RequestTrackingAuthorization(this);
+            }
+            else
+            {
+                GameAnalytics.Initialize();
+            }*/
+        }
+
+        #endregion
+    }
 }

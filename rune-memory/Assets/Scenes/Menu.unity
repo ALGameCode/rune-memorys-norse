@@ -295,6 +295,17 @@ RectTransform:
   m_AnchoredPosition: {x: -429, y: -1338}
   m_SizeDelta: {x: 152.56, y: 318.12}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &65455033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+  m_PrefabInstance: {fileID: 386399614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &87081951
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +722,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295926931}
   m_CullTransparentMesh: 1
+--- !u!114 &308991744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+  m_PrefabInstance: {fileID: 604362856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &310527364 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6384548217352069591, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
@@ -1157,6 +1179,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6384548217352069591, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
   m_PrefabInstance: {fileID: 551176154}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &560717753 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+  m_PrefabInstance: {fileID: 1236707331}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &565833111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1285,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 974617755}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ChangeSpriteButtonMute
         m_Mode: 5
@@ -1439,6 +1472,38 @@ PrefabInstance:
     - target: {fileID: 6384548217352069589, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
       propertyPath: m_Color.r
       value: 0.19607845
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1342709999}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuUI.ScenesManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384548217352069590, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6384548217352069591, guid: 1d6338ed8d8b2904eacd915754d5ca04, type: 3}
       propertyPath: m_Pivot.x
@@ -2151,7 +2216,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 974617755}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ChangeSpriteButtonMute
         m_Mode: 5
@@ -2436,7 +2501,7 @@ GameObject:
   - component: {fileID: 974617754}
   - component: {fileID: 974617755}
   m_Layer: 5
-  m_Name: CanvaUIManager
+  m_Name: CanvaUIMenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2470,35 +2535,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 974617753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf997a6cd5f02c45bd34d44193c5b72, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c5e474c531868f41b90597b14d5099c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  slotPrefab: {fileID: 2550539694274459858, guid: e67e64932e9373f4d8e765017bbd1164, type: 3}
-  levelNameText: {fileID: 0}
-  timerText: {fileID: 0}
-  treasuresText: {fileID: 0}
-  vikingsText: {fileID: 0}
-  pauseGamePopup: {fileID: 0}
-  helpGamePopup: {fileID: 0}
-  endGamePopupPainel: {fileID: 0}
-  endResultText: {fileID: 0}
-  endGamePopupInfo: {fileID: 0}
-  endNewGameButton: {fileID: 0}
-  endTreasuresText: {fileID: 0}
-  endVikingsText: {fileID: 0}
-  endTimeText: {fileID: 0}
-  endRoundsText: {fileID: 0}
-  endExperienceText: {fileID: 0}
-  winnerText: Successful Incursion
-  winnerColor: {r: 1, g: 0.9764706, b: 0.41960785, a: 1}
-  winnerBackgroundImage: {fileID: 0}
-  defeatText: Defeated
-  defeatColor: {r: 1, g: 0.45882353, b: 0.41960785, a: 1}
-  defeatBackgroundImage: {fileID: 0}
-  escapedText: You Escaped
-  escapedColor: {r: 0.41960785, g: 0.7019608, b: 1, a: 1}
-  escapedBackgroundImage: {fileID: 0}
+  buttonStartGameEasy: {fileID: 308991744}
+  buttonStartGameMedium: {fileID: 560717753}
+  buttonStartGameHard: {fileID: 65455033}
   muteBGMButtonSprites:
   - {fileID: 21300000, guid: 9ea31cd8ba0d30040bbc613da1799bfe, type: 3}
   - {fileID: 21300000, guid: 9ec442836117f904a858a8b7f1cf785b, type: 3}
@@ -2507,7 +2549,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a6208100bc471740963f0f89e7f863f, type: 3}
   - {fileID: 21300000, guid: a6561ae7e9d0cd54796b2924535a43bc, type: 3}
   muteSfxImage: {fileID: 1384086933}
-  slots: []
 --- !u!1 &982286108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,7 +5034,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runesConfiguration: {fileID: 11400000, guid: 44a5f61b4bfd12540b4dd56a609a3261, type: 2}
   levelDifficultyConfiguration: {fileID: 11400000, guid: df44c8204c4cdd64ca670dae8c80e015, type: 2}
-  levelController: {fileID: 0}
 --- !u!1 &2080844980
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+/// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,29 +8,12 @@ using System;
 /// <summary>
 /// General information and game states
 /// </summary>
-public class GeneralGameInfo // sealed 
+namespace Mechanics
 {
-    private static GeneralGameInfo instance = null;
-
-    public bool GameSoundBGMIsMute { get; set; } = false;
-    public bool GameSoundSFXIsMute { get; set; } = false;
-    public DateTime LastAcessDateTime { get; set; } = DateTime.Now;
-
-    #region Singleton
-
-    private GeneralGameInfo(){}
-
-    public static GeneralGameInfo Instance
+    public class GeneralGameInfo : Singleton<GeneralGameInfo>
     {
-        get // lock (padlock)
-        {
-            if (instance == null)
-            {
-                instance = new GeneralGameInfo();
-            }
-            return instance;
-        }
+        public bool GameSoundBGMIsMute { get; set; } = false;
+        public bool GameSoundSFXIsMute { get; set; } = false;
+        public DateTime LastAcessDateTime { get; set; } = DateTime.Now;
     }
-
-    #endregion
 }
