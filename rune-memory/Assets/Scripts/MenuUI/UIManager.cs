@@ -15,7 +15,7 @@ namespace MenuUI
 {
     public class UIManager : MonoBehaviour
     {
-        public static UIManager instance;
+        public static UIManager instance = null;
 
         #region GameScreenConfigVars
 
@@ -30,6 +30,7 @@ namespace MenuUI
         public TextMeshProUGUI vikingsText;
 
         [Header("Game Popup Settings")]
+        public Button pauseGameButton;
         public GameObject pauseGamePopup;
         public GameObject helpGamePopup;
 
@@ -65,16 +66,6 @@ namespace MenuUI
         [SerializeField] private GameObject escapedBackgroundImage;
 
         #endregion
-        #region OthersButtons
-        [Header("Mute BGM Sprites")]
-        [Tooltip("At index 0 is equivalent to mute and 1 to playing")] 
-        public Sprite[] muteBGMButtonSprites = new Sprite[2];
-        public Image muteBgmImage;
-        [Header("Mute SFX Sprites")]
-        [Tooltip("At index 0 is equivalent to mute and 1 to playing")] 
-        public Sprite[] muteSFXButtonSprites = new Sprite[2];
-        public Image muteSfxImage;
-        #endregion 
 
         [HideInInspector] public List<GameObject> slots = new List<GameObject>();
 
@@ -85,11 +76,12 @@ namespace MenuUI
             if (instance == null)
             {
                 instance = this;
-            } 
-            else
-            {
-                Destroy(this.gameObject);
             }
+        }
+
+        private void Start() 
+        {
+            pauseGameButton.onClick.AddListener(GameManager.Instance.PauseGame);
         }
 
         private void Update()
@@ -104,6 +96,9 @@ namespace MenuUI
 
         #region GridSlotsSettings
 
+        /// <summary>
+        /// ...
+        /// </summary>
         public void CreateSlotsGrid(int quantityPieces)
         {
             if(slotPrefab != null && quantityPieces > 0)
@@ -120,6 +115,9 @@ namespace MenuUI
             }
         }
 
+        /// <summary>
+        /// ...
+        /// </summary>
         public void GetAllSlotsGrid(int quantityPieces)
         {
             slots = GameObject.FindGameObjectsWithTag("Slot").ToList();
@@ -169,13 +167,47 @@ namespace MenuUI
 
         public void ShowEndGameScreen()
         {
-
+            endTreasuresText.text = $"+ {LevelGameManager.Instance.treasures}";
+            endVikingsText.text = $"{GameManager.Instance.playerStatus.ActiveVikings}/{GameManager.Instance.playerStatus.TotalVikings}";
+            endTimeText.text = timerText.text.ToString();
+            endRoundsText.text = Turn.Instance.TotalTurns.ToString();
+            //endExperienceText = ; // TODO: Calculate experience based on lost treasures, time, rounds and vikings
+            GameManager.Instance.playerStatus.Treasures += LevelGameManager.Instance.treasures;
         }
 
-        public void CreateWinnerScreen(TextMeshProUGUI textTitle, Image imageBackground)
+        public void CreateWinnerScreen()
         {
-            textTitle.text = winnerText;
+            ShowEndGameScreen();
+            endResultText.text = winnerText;
+            endResultText.color = winnerColor;
+            endGamePopupInfo.SetActive(true);
+            endGamePopupPainel.SetActive(true);
+            winnerBackgroundImage.SetActive(true);
+            //endNewGameButton.gameComponent.SetActive(true);
+            pauseGameButton.interactable = false;
+            GameManager.Instance.PauseGame();
+        }
 
+        public void CreateDefeatScreen()
+        {
+            endResultText.text = defeatText;
+            endResultText.color = defeatColor;
+            defeatBackgroundImage.SetActive(true);
+            endGamePopupPainel.SetActive(true);
+            pauseGameButton.interactable = false;
+            GameManager.Instance.PauseGame();
+            GameManager.Instance.SaveAllPlayerInfo();
+        }
+
+        public void CreateEscapedScreen()
+        {
+            ShowEndGameScreen();
+            endResultText.text = escapedText;
+            endResultText.color = escapedColor;
+            endGamePopupInfo.SetActive(true);
+            endGamePopupPainel.SetActive(true);
+            escapedBackgroundImage.SetActive(true);
+            //GameManager.Instance.PauseGame();
         }
 
         public void ShowVikingTextUI(int numVikingsAlive, int numVikingsTotal)
@@ -188,36 +220,33 @@ namespace MenuUI
             treasuresText.text = $"{numTreasures}";
         }
 
+        public void PauseGameOnClick()
+        {
+            GameManager.Instance.PauseGame();
+        }
+
+        public void ReturnToMainMenu()
+        {
+            ScenesManager.Instance.ChangeSceneByName("Menu");
+        }
+
+        /// <summary>
+        /// Updates and shows game timer
+        /// </summary>
         public void ShowTimer()
         {
             int hour, minute, second;
             float timer = LevelGameManager.Instance.GameTimer;
             minute = (int)timer/60;
             hour = minute/60;
-            second = (int)timer % 60; //- (minute * 60);
+            second = (int)timer % 60;
             minute = minute - (hour * 60);
 
             timerText.text = $"{hour}:{minute}:{second}";
         }
 
         #endregion
-
-        #region ButtonsOthers
-        
-        public void ChangeSpriteButtonMute(string type)
-        {
-            if(Sound.SoundManager.Instance.SourcePlay.mute)
-            {
-                if(type.Equals("BGM")) muteBgmImage.sprite = muteBGMButtonSprites[0];
-                else if(type.Equals("SFX")) muteSfxImage.sprite = muteSFXButtonSprites[0];
-            }
-            else
-            {
-                if(type.Equals("BGM")) muteBgmImage.sprite = muteBGMButtonSprites[1];
-                else if(type.Equals("SFX")) muteSfxImage.sprite = muteSFXButtonSprites[1];
-            }
-        }
-
-        #endregion
     }
 }
+
+// TODO: How does mainmenu.cs transform this class into UI actions only and pass functions that are called from others by the instance to own classes

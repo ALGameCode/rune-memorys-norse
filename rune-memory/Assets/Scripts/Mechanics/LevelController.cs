@@ -13,7 +13,10 @@ namespace Mechanics
         public static LevelDifficultyTag LevelDifficulty { get; private set; } = LevelDifficultyTag.EASY;
         private const string gameScene = "Game";
 
-        // Seleciona dificuldade // TODO: usar evento com botoes para chamar essa função button.OnClick += SetSelectedDifficulty
+        /// <summary>
+        /// Selects difficulty of the game to be created
+        /// TODO: use event with buttons to call this function button.OnClick += SetSelectedDifficulty
+        /// </summary>
         public void SetSelectedDifficulty(LevelDifficultyTag difficulty)
         {
             if(CheckDifficultyRequirements(difficulty))
@@ -21,9 +24,15 @@ namespace Mechanics
                 LevelDifficulty = difficulty;
                 StartNewGameLevel();
             }
+            else
+            {
+                // TODO: Show message 
+            }
         }
 
-        // Verificar requisitos energia e vikings
+        /// <summary>
+        /// Check energy requirements and vikings to enter and create selected level stage
+        /// </summary>
         private bool CheckDifficultyRequirements(LevelDifficultyTag difficulty)
         {
             int viking = GameManager.Instance.playerStatus.ActiveVikings;
@@ -36,12 +45,17 @@ namespace Mechanics
             return false;
         }
 
-        // Iniciar ou mostrar mensagens
+        /// <summary>
+        /// Change scene to start game
+        /// </summary>
         private void StartNewGameLevel()
         {
             MenuUI.ScenesManager.Instance.ChangeSceneByName(gameScene);
         }
 
+        /// <summary>
+        /// Get the selected level or difficulty tag
+        /// </summary>
         public LevelDifficultyTag GetLevelDifficultyTag()
         {
             return LevelDifficulty;

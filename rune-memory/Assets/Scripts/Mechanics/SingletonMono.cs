@@ -47,7 +47,7 @@ public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.root.gameObject);
     }
 
     protected virtual void OnApplicationQuit() 

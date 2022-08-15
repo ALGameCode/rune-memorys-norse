@@ -12,26 +12,20 @@ namespace Mechanics
     public class Turn : Singleton<Turn>
     {
         public TurnStep TurnController { get; private set; }
+        public int TotalTurns { get; private set;} = 1;
+        public float EndTurnTimer = 1f;     
 
-        public float EndTurnTimer = 2f;
-
-        public int TotalTurns { get; private set;} = 0;
-
-        public void StartTurn()
+        /// <summary>
+        /// Sum new turn to count at the end of the game
+        /// </summary>
+        public void SumTurns()
         {
             TotalTurns++;
         }
 
-        public void EndTurn()
-        {
-            
-        }
-
-        public void NextTurn()
-        {
-
-        }
-
+        /// <summary>
+        /// Switch to next step after player play
+        /// </summary>
         public void NextStep()
         {
             switch (TurnController)
@@ -51,6 +45,9 @@ namespace Mechanics
             NextStepAction();
         }
 
+        /// <summary>
+        /// Executes actions every turn of a turn
+        /// </summary>
         public void NextStepAction()
         {
             switch (TurnController)
@@ -62,7 +59,7 @@ namespace Mechanics
                     // ...
                     break;
                 case TurnStep.SECOND_PIECE:
-                    // Verificar resultado
+                    SumTurns();
                     break;
                 default:
                     break;
@@ -70,3 +67,5 @@ namespace Mechanics
         } 
     }
 }
+
+// TODO: Use NextStepAction to control specific actions that can happen in each step of the shift, eg tips, tutorials, release a new specific action, etc.

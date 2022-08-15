@@ -1,4 +1,4 @@
-// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+/// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +13,7 @@ public class PlayerStatus
 
     public int TotalVikings { get; set; } = 30;
     public int ActiveVikings { get; set; } = 30;
-    public int TotalEnergy { get; set; } = 0;
+    public int TotalEnergy { get; set; } = 300;
     public int Treasures { get; set; } = 0;
 
     public int TotalWin { get; set; } = 0;
@@ -40,6 +40,13 @@ public class PlayerStatus
     public int TotalEscapeHard { get; set; } = 0;
     public float BestTimeHard { get; set; } = 0f;
     public int BestMinTurnHard { get; set; } = 0;
+
+    public void UpdatePlayerTotalEnergy()
+    {
+        TotalEnergy = ActiveVikings * 10;
+        // TODO: This logic will change when it s possible update the vikings in the village
+    }
+
 }
 
 // TODO: considering future features, is this better as singleton or not?

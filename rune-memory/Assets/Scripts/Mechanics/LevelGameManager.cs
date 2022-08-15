@@ -11,57 +11,70 @@ using MenuUI;
 namespace Mechanics
 {
     public class LevelGameManager : SingletonMono<LevelGameManager>
-    {
+    {      
+        [Header("Level Settings")]
         public LevelDifficultyTag levelDifficulty = LevelDifficultyTag.EASY;
-        private Difficulty difficulty;
-
-        public List<string> RunesGrid { get; private set; }
-        [HideInInspector] public List<int> runeSlotShowerIndex = new List<int>();
-
-        // Time
-        public float GameTimer { get; private set; } = 0f;
         public float turnTimer = 0f;
 
+        private Difficulty difficulty;        
+        [HideInInspector] public List<int> runeSlotShowerIndex = new List<int>();
+        public List<string> RunesGrid { get; private set; }
+        public float GameTimer { get; private set; } = 0f;
         public bool Result { get; set; } // True = Correct ;  False = Wrong
-
+        public int treasures { get; private set; } = 0;
         private bool showingAllRunes = false;
-
-        // Player
-        public float treasures = 0;
-        public int vikings = 0;
-        public float energy = 0;
+        private const int treasuresPerRune = 10; // TODO: Define on setup level/difficulty
+        private int foundRunes = 0;
+        private int numRunes = 0;
         
         #region ClassInitialization
 
         private void Start()
         {
-            StartLevel();
-            ResetRunesSkin();
+            if(ScenesManager.Instance.ReturnCurrentSceneName() == "Game")
+            {
+                StartLevel();
+                UIManager.instance.ShowVikingTextUI(GameManager.Instance.playerStatus.ActiveVikings, GameManager.Instance.playerStatus.TotalVikings);
+                UIManager.instance.ShowTreasuresTextUI(treasures);
+            }
         }
 
         private void Update() 
         {
-            GameTimer += Time.deltaTime;
-            StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
-            if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
+            if((ScenesManager.Instance.ReturnCurrentSceneName() == "Game") 
+            && (!GameManager.Instance.IsPlayGame))
             {
-                turnTimer += Time.deltaTime;
-                EndTurnGame();
+                StartLevel();
+            }
+            else if ((GameManager.Instance.IsPlayGame))
+            {
+                GameTimer += Time.deltaTime;
+                StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
+                if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
+                {
+                    turnTimer += Time.deltaTime;
+                    EndTurnGame();
+                }
             }
         }
 
         #endregion
 
+        /// <summary>
+        /// Start creating the level
+        /// </summary>
         public void StartLevel()
         {
             if(GameManager.Instance.levelController != null)
             {
-                levelDifficulty = GameManager.Instance.levelController.GetLevelDifficultyTag(); //LevelDifficulty;
+                levelDifficulty = GameManager.Instance.levelController.GetLevelDifficultyTag();
             }
             GameManager.Instance.runesConfiguration.ConfigureDictionary();
             ChooseRunes(GetRunes());
             ConfigureGrid();
             GameManager.Instance.IsPlayGame = true;
+            ResetRunesSkin();
+            numRunes = difficulty.quantityPieces / 2;
         }
         
         /// <summary>
@@ -76,6 +89,10 @@ namespace Mechanics
             UIManager.instance.SetRunesOnSlots(RunesGrid);
         }
 
+        /// <summary>
+        /// Returns the list of shuffled runes
+        /// </summary>
+        /// <returns>List of shuffled runes</returns>
         private List<string> GetRunes()
         {
             List<string> list = new List<string>();
@@ -89,6 +106,10 @@ namespace Mechanics
             return GameManager.Instance.BlendList(list);
         }
 
+        /// <summary>
+        /// Choose, duplicate and shuffle the runes, finally saving them on the grid
+        /// </summary>
+        /// <param name="newList">New list of runes to pick and shuffle</param>
         private void ChooseRunes (List<string> newList)
         {
             RunesGrid = new List<string>();
@@ -142,6 +163,10 @@ namespace Mechanics
         
         #region OnGameFunctions
 
+        /// <summary>
+        /// Check if the runes are the same
+        /// </summary>
+        /// <param name="slotsIndex">index of selected slot</param>
         public bool ValidRunes(List<int> slotsIndex)
         {
             if(slotsIndex.Count > 0)
@@ -178,23 +203,33 @@ namespace Mechanics
             }
         }
 
+        /// <summary>
+        /// Actions if you miss the rune
+        /// </summary>
         public void WrongResult()
         {
             HideSelectedRunes(runeSlotShowerIndex);
             runeSlotShowerIndex.Clear();
-            // Perder pontos
-            // NextStep();
+            GameManager.Instance.playerStatus.ActiveVikings--;
+            UIManager.instance.ShowVikingTextUI(GameManager.Instance.playerStatus.ActiveVikings, GameManager.Instance.playerStatus.TotalVikings);
         }
 
+        /// <summary>
+        /// Actions if you turn correct rune
+        /// </summary>
         public void CorrectResult()
         {
             MarkFoundRunes(runeSlotShowerIndex);
             runeSlotShowerIndex.Clear();
-            // Mostrar PopUp
-            // Somar Pontos
-            // NextStep();
+            foundRunes++;
+            treasures += treasuresPerRune; 
+            UIManager.instance.ShowTreasuresTextUI(treasures);
         }
 
+        /// <summary>
+        /// Hide rune in selected slot
+        /// </summary>
+        /// <param name="slotsIndex">index of selected slot</param>
         private void HideSelectedRunes(List<int> slotsIndex)
         {
             if(slotsIndex.Count > 0)
@@ -206,6 +241,10 @@ namespace Mechanics
             }
         }
 
+        /// <summary>
+        /// Mark rune and slot as found by keeping face up and deactivating the slot
+        /// </summary>
+        /// <param name="slotsIndex">index of selected slot</param>
         private void MarkFoundRunes(List<int> slotsIndex)
         {
             if(slotsIndex.Count > 0)
@@ -217,6 +256,9 @@ namespace Mechanics
             }
         }
 
+        /// <summary>
+        /// End the turn and check if it was a correct or wrong
+        /// </summary>
         private void EndTurnGame()
         {
             if(turnTimer >= Turn.Instance.EndTurnTimer)
@@ -231,8 +273,26 @@ namespace Mechanics
                     WrongResult();
                 }
                 Turn.Instance.NextStep();
+                EndGame();
                 turnTimer = 0f;
             }
+        }
+
+        /// <summary>
+        /// Check conditions to call end of game
+        /// </summary>
+        private void EndGame()
+        {
+            if(foundRunes == numRunes)
+            {
+                UIManager.instance.CreateWinnerScreen();
+            }
+            else if(GameManager.Instance.playerStatus.ActiveVikings <= 0)
+            {
+                UIManager.instance.CreateDefeatScreen();
+            }
+
+            GameManager.Instance.SaveAllPlayerInfo();
         }
 
         #endregion
@@ -249,6 +309,10 @@ namespace Mechanics
             return GameManager.Instance.runesConfiguration.runesDictionary[name];
         }
 
+        /// <summary>
+        /// Show all runes on the grid
+        /// </summary>
+        /// <param name="slotObjects">Slot where the rune is</param>
         public void ShowAllRunes(List<GameObject> slotObjects)
         {
             if(slotObjects != null)
@@ -260,6 +324,10 @@ namespace Mechanics
             }
         }
 
+        /// <summary>
+        /// Hide all grid runes
+        /// </summary>
+        /// <param name="slotObjects">Slot where the rune is</param>
         public void HideAllRunes(List<GameObject> slotObjects)
         {
             if(slotObjects != null)
@@ -271,6 +339,9 @@ namespace Mechanics
             }
         }
 
+        /// <summary>
+        /// Reset rune skins to default
+        /// </summary>
         public void ResetRunesSkin()
         {
             if(GameManager.Instance.runesConfiguration.runesDictionary != null)
@@ -280,7 +351,6 @@ namespace Mechanics
                     GameManager.Instance.runesConfiguration.runesDictionary.ElementAt(i).Value.useSkin = GameManager.Instance.runesConfiguration.runesDictionary.ElementAt(i).Value.RuneMainSkin;
                 }
             }
-            
         }
 
         #endregion

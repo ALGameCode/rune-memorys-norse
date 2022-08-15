@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Save;
 
 /// <summary>
 /// General Game Manager
@@ -19,6 +20,7 @@ namespace Mechanics
 
         public bool IsPaused { get; private set; } = false;
         public bool IsPlayGame { get; set; } = false;
+        public bool IsSoundMute { get; set; } = false;
 
         #region ClassInitialization
 
@@ -26,7 +28,9 @@ namespace Mechanics
         {
             levelController = new LevelController();
             playerStatus = new PlayerStatus();
-            
+            //LocalSave.ClearLocalSave();
+            LoadPlayerInfo();
+
             if(IsPaused)
             {
                 PauseGame();
@@ -35,17 +39,34 @@ namespace Mechanics
 
         #endregion
 
-        private void LoadInfo()
+        /// <summary>
+        /// Load Saved Player and Game Info
+        /// </summary>
+        private void LoadPlayerInfo()
         {
-            // Existe save de perfil?
+            if(LocalSave.CheckLocalSave("PlayerName"))
+            {
+                LocalSave.LoadPlayerInfoLocalSave(ref playerStatus);
+                LocalSave.LoadPlayerGameInfoLocalSave(ref playerStatus);
+                LocalSave.LoadGeneralGameInfoLocalSave();
+            }
+            else
+            {
+                LocalSave.SavePlayerInfoLocalSave(playerStatus);
+                LocalSave.SavePlayerGameInfoLocalSave(playerStatus);
+                LocalSave.SaveGeneralGameInfoLocalSave();
+            }
+            // TODO: Get and Set Cloud Save
+        }
 
-            // Existe Save de jogo?
-
-            //Se Sim carregar
-
-            //Se não Criar e salvar
-
-            // TODO: Get Cloud Save
+        /// <summary>
+        /// Save Player and Game Info
+        /// </summary>
+        public void SaveAllPlayerInfo()
+        {
+            LocalSave.SavePlayerInfoLocalSave(playerStatus);
+            LocalSave.SavePlayerGameInfoLocalSave(playerStatus);
+            LocalSave.SaveGeneralGameInfoLocalSave();
         }
 
         /// <summary>
@@ -64,6 +85,9 @@ namespace Mechanics
             return query.ToList();
         }
 
+        /// <summary>
+        /// Pause and Resume Game
+        /// </summary>
         public void PauseGame()
         {
             if(IsPaused)
@@ -74,9 +98,7 @@ namespace Mechanics
             {
                 Time.timeScale = 0;
             }
-
             IsPaused = !IsPaused;
         }
-
     }
 }

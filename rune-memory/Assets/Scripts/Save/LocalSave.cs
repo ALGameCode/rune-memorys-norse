@@ -15,7 +15,7 @@ namespace Save
         /// Local save player information
         /// </summary>
         /// <param name="player">Player Information</param>
-        public void SavePlayerInfoLocalSave(PlayerStatus player)
+        public static void SavePlayerInfoLocalSave(PlayerStatus player)
         {
             PlayerPrefs.SetString("PlayerName", player.PlayerName);
             PlayerPrefs.SetInt("PlayerLevel", player.PlayerLevel);
@@ -29,7 +29,7 @@ namespace Save
         /// Local save player gameplay information
         /// </summary>
         /// <param name="player">Player Information</param>
-        public void SavePlayerGameInfoLocalSave(PlayerStatus player)
+        public static void SavePlayerGameInfoLocalSave(PlayerStatus player)
         {
             PlayerPrefs.SetInt("TotalWin", player.TotalWin);
             PlayerPrefs.SetInt("TotalDefeat", player.TotalDefeat);
@@ -60,18 +60,18 @@ namespace Save
         /// <summary>
         /// Local save game and general application information
         /// </summary>
-        public void SaveGeneralGameInfoLocalSave()
+        public static void SaveGeneralGameInfoLocalSave()
         {
             PlayerPrefs.SetInt("GameSoundBGMIsMute", Mechanics.GeneralGameInfo.Instance.GameSoundBGMIsMute ? 1 : 0);
             PlayerPrefs.SetInt("GameSoundSFXIsMute", Mechanics.GeneralGameInfo.Instance.GameSoundSFXIsMute ? 1 : 0);
-            PlayerPrefs.SetString("LastAcessDateTime", System.DateTime.Now.ToString("yyyy-MM-dd_HH:mm:ss"));
+            PlayerPrefs.SetString("LastAcessDateTime", System.DateTime.Now.ToString("yyyy/MM/dd hh:mm tt"));
         }
         
         /// <summary>
         /// Load local saved player information
         /// </summary>
         /// <param name="player">Player Information</param>
-        public void LoadPlayerInfoLocalSave(ref PlayerStatus player) //out PlayerStatus player
+        public static void LoadPlayerInfoLocalSave(ref PlayerStatus player) //out PlayerStatus player
         {
             player.PlayerName = PlayerPrefs.GetString("PlayerName");
             player.PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
@@ -85,7 +85,7 @@ namespace Save
         /// Load local saved player gameplay information
         /// </summary>
         /// <param name="player">Player Information</param>
-        public void LoadPlayerGameInfoLocalSave(ref PlayerStatus player)
+        public static void LoadPlayerGameInfoLocalSave(ref PlayerStatus player)
         {
             player.TotalWin = PlayerPrefs.GetInt("TotalWin");
             player.TotalDefeat = PlayerPrefs.GetInt("TotalDefeat");
@@ -116,18 +116,19 @@ namespace Save
         /// <summary>
         /// Load local saved game and general application information
         /// </summary>
-        public void LoadGeneralGameInfoLocalSave()
+        public static void LoadGeneralGameInfoLocalSave()
         {
+
             Mechanics.GeneralGameInfo.Instance.GameSoundBGMIsMute = PlayerPrefs.GetInt("GameSoundBGMIsMute") == 1;
             Mechanics.GeneralGameInfo.Instance.GameSoundSFXIsMute = PlayerPrefs.GetInt("GameSoundSFXIsMute") == 1;
-            Mechanics.GeneralGameInfo.Instance.LastAcessDateTime = System.DateTime.ParseExact(PlayerPrefs.GetString("LastAcessDateTime"), "yyyy-MM-dd_HH:mm:ss", null);
+            Mechanics.GeneralGameInfo.Instance.LastAcessDateTime = System.DateTime.ParseExact(PlayerPrefs.GetString("LastAcessDateTime"), "yyyy/MM/dd hh:mm tt", null);
         }
 
         /// <summary>
         /// Check if there is local save
         /// </summary>
         /// <param name="key">Saved information key</param>
-        public bool CheckLocalSave(string key)
+        public static bool CheckLocalSave(string key)
         {
             if (PlayerPrefs.HasKey(key))
             {
@@ -139,7 +140,7 @@ namespace Save
         /// <summary>
         /// Delete all local save
         /// </summary>
-        public void ClearLocalSave()
+        public static void ClearLocalSave()
         {
             PlayerPrefs.DeleteAll();
         }

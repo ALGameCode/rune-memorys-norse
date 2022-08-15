@@ -13,9 +13,14 @@ using Mechanics;
 /// </summary>
 namespace MenuUI
 {
-    public class MainMenu : SingletonMono<MainMenu>
+    public class MainMenu : MonoBehaviour //SingletonMono<MainMenu>
     {
         #region MainMenu
+
+        [Header("Player Info Settings")]
+        public TextMeshProUGUI energyText;
+        public TextMeshProUGUI treasuresText;
+        public TextMeshProUGUI vikingsText;
 
         [Header("Start Game Buttons")]
         public Button buttonStartGameEasy;
@@ -24,17 +29,6 @@ namespace MenuUI
 
         #endregion
 
-        #region OthersButtons
-        [Header("Mute BGM Sprites")]
-        [Tooltip("At index 0 is equivalent to mute and 1 to playing")] 
-        public Sprite[] muteBGMButtonSprites = new Sprite[2];
-        public Image muteBgmImage;
-        [Header("Mute SFX Sprites")]
-        [Tooltip("At index 0 is equivalent to mute and 1 to playing")] 
-        public Sprite[] muteSFXButtonSprites = new Sprite[2];
-        public Image muteSfxImage;
-        #endregion 
-
         private void Start()
         {
             buttonStartGameEasy.onClick.AddListener(delegate {StartNewLevel(LevelDifficultyTag.EASY);});
@@ -42,31 +36,32 @@ namespace MenuUI
             buttonStartGameHard.onClick.AddListener(delegate {StartNewLevel(LevelDifficultyTag.HARD);});
         }
 
-        #region LevelSelection
+        private void FixedUpdate()
+        {
+            UpdateMenuUI(GameManager.Instance.playerStatus);
+        }
 
+        /// <summary>
+        /// Select and set difficulty to start new game
+        /// </summary>
+        /// <param name="difficulty">Difficulty Tag</param>
         public void StartNewLevel(LevelDifficultyTag difficulty)
         {
             GameManager.Instance.levelController.SetSelectedDifficulty(difficulty);
         }
 
-        #endregion
-
-        #region ButtonsOthers
-        
-        public void ChangeSpriteButtonMute(string type)
+        /// <summary>
+        /// Update main menu UI text info
+        /// </summary>
+        /// <param name="player">Player Information</param>
+        public void UpdateMenuUI(PlayerStatus player)
         {
-            if(Sound.SoundManager.Instance.SourcePlay.mute)
+            if(player != null)
             {
-                if(type.Equals("BGM")) muteBgmImage.sprite = muteBGMButtonSprites[0];
-                else if(type.Equals("SFX")) muteSfxImage.sprite = muteSFXButtonSprites[0];
-            }
-            else
-            {
-                if(type.Equals("BGM")) muteBgmImage.sprite = muteBGMButtonSprites[1];
-                else if(type.Equals("SFX")) muteSfxImage.sprite = muteSFXButtonSprites[1];
+                energyText.text = $"{player.TotalEnergy}";
+                treasuresText.text = $"{player.Treasures}";
+                vikingsText.text = $"{player.ActiveVikings}/{player.TotalVikings}";
             }
         }
-
-        #endregion
     }
 }

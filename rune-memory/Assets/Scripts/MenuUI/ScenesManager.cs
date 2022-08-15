@@ -65,5 +65,15 @@ namespace MenuUI
         {
             CurrentSceneName = SceneManager.GetActiveScene().name;
         }
+
+        /// <summary>
+        /// Get the name of the current scene and store it in the CurrentSceneName variable leaving it available for the system to use.
+        /// </summary>
+        /// <returns>Return Current Scene Name</returns>
+        public string ReturnCurrentSceneName() 
+        {
+            CurrentSceneName = SceneManager.GetActiveScene().name;
+            return CurrentSceneName;
+        }
     }
 }
