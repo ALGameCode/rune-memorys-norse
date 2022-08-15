@@ -97,8 +97,9 @@ namespace MenuUI
         #region GridSlotsSettings
 
         /// <summary>
-        /// ...
+        /// Create the slots on the grid
         /// </summary>
+        /// <param name="quantityPieces">Quantity of pieces that must be created</param>
         public void CreateSlotsGrid(int quantityPieces)
         {
             if(slotPrefab != null && quantityPieces > 0)
@@ -116,8 +117,9 @@ namespace MenuUI
         }
 
         /// <summary>
-        /// ...
+        /// Get and store all grid slots
         /// </summary>
+        /// <param name="quantityPieces">Quantity of pieces that must be created</param>
         public void GetAllSlotsGrid(int quantityPieces)
         {
             slots = GameObject.FindGameObjectsWithTag("Slot").ToList();
@@ -134,6 +136,9 @@ namespace MenuUI
 
         }
 
+        /// <summary>
+        /// Configure grid visually
+        /// </summary>
         public void ConfigureGrid(int gridPaddingLeft, int gridPaddingRight, int gridPaddingTop, int gridPaddingBotton, float gridCellSizeX, float gridCellSizeY, float gridSpacingX, float gridSpacingY)
         {
             if(grid != null)
@@ -147,6 +152,10 @@ namespace MenuUI
             }
         }
 
+        /// <summary>
+        /// Put each rune in a slot
+        /// </summary>
+        /// <param name="runes">list of runes</param>
         public void SetRunesOnSlots(List<string> runes)
         {   
             if(runes != null)
@@ -165,6 +174,9 @@ namespace MenuUI
         
         #region ScreenUISettings
 
+        /// <summary>
+        /// Fill score and status values, and create endgame screen
+        /// </summary>
         public void ShowEndGameScreen()
         {
             endTreasuresText.text = $"+ {LevelGameManager.Instance.treasures}";
@@ -175,6 +187,9 @@ namespace MenuUI
             GameManager.Instance.playerStatus.Treasures += LevelGameManager.Instance.treasures;
         }
 
+        /// <summary>
+        /// Create end screen of player won
+        /// </summary>
         public void CreateWinnerScreen()
         {
             ShowEndGameScreen();
@@ -186,8 +201,13 @@ namespace MenuUI
             //endNewGameButton.gameComponent.SetActive(true);
             pauseGameButton.interactable = false;
             GameManager.Instance.PauseGame();
+            GameManager.Instance.SaveAllPlayerInfo(); // TODO: When adding bonus call this later
+            LevelGameManager.Instance.FinishLevel();
         }
 
+        /// <summary>
+        /// Create lost player end screen
+        /// </summary>
         public void CreateDefeatScreen()
         {
             endResultText.text = defeatText;
@@ -197,8 +217,12 @@ namespace MenuUI
             pauseGameButton.interactable = false;
             GameManager.Instance.PauseGame();
             GameManager.Instance.SaveAllPlayerInfo();
+            LevelGameManager.Instance.FinishLevel();
         }
 
+        /// <summary>
+        /// Create escaped player end screen
+        /// </summary>
         public void CreateEscapedScreen()
         {
             ShowEndGameScreen();
@@ -208,23 +232,41 @@ namespace MenuUI
             endGamePopupPainel.SetActive(true);
             escapedBackgroundImage.SetActive(true);
             //GameManager.Instance.PauseGame();
+            GameManager.Instance.SaveAllPlayerInfo(); // TODO: When adding bonus call this later
+            LevelGameManager.Instance.FinishLevel();
         }
 
+        /// <summary>
+        /// Adds to the text in the ui the amount of vikings remaining
+        /// </summary>
+        /// <param name="numVikingsAlive">Living or active Vikings</param>
+        /// <param name="numVikingsTotal">Total Vikings the player owns</param>
         public void ShowVikingTextUI(int numVikingsAlive, int numVikingsTotal)
         {
             vikingsText.text = $"{numVikingsAlive} / {numVikingsTotal}";
         }
 
+        /// <summary>
+        /// Adds to the text in the UI the amount of treasures
+        /// </summary>
+        /// <param name="numTreasures">Quantity of treasures</param>
         public void ShowTreasuresTextUI(int numTreasures)
         {
             treasuresText.text = $"{numTreasures}";
         }
 
+        /// <summary>
+        /// temporary function
+        /// Pause when calling this function by click event
+        /// </summary>
         public void PauseGameOnClick()
         {
             GameManager.Instance.PauseGame();
         }
 
+        /// <summary>
+        /// Back to main menu
+        /// </summary>
         public void ReturnToMainMenu()
         {
             ScenesManager.Instance.ChangeSceneByName("Menu");
@@ -249,4 +291,8 @@ namespace MenuUI
     }
 }
 
-// TODO: How does mainmenu.cs transform this class into UI actions only and pass functions that are called from others by the instance to own classes
+/* TODO:
+ * Refactor this class, it's too big and full of dependencies.
+ * How does mainmenu.cs transform this class into UI actions only and pass functions that are called from 
+ * others by the instance to own classes.
+ */

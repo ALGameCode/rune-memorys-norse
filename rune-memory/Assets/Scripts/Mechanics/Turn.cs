@@ -24,6 +24,15 @@ namespace Mechanics
         }
 
         /// <summary>
+        /// Reset turn variables
+        /// </summary>
+        public void ResetTurnGame()
+        {
+            TotalTurns = 0;
+            TurnController = TurnStep.IDLE;
+        }
+
+        /// <summary>
         /// Switch to next step after player play
         /// </summary>
         public void NextStep()

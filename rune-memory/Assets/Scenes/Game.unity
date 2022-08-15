@@ -2647,7 +2647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelDifficulty: 1
-  turnTimer: 0
+  turnTimer: 1
   runeSlotShowerIndex: 
 --- !u!1 &779511035
 GameObject:

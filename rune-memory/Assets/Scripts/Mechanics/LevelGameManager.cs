@@ -37,23 +37,30 @@ namespace Mechanics
                 UIManager.instance.ShowVikingTextUI(GameManager.Instance.playerStatus.ActiveVikings, GameManager.Instance.playerStatus.TotalVikings);
                 UIManager.instance.ShowTreasuresTextUI(treasures);
             }
+            /*else if(ScenesManager.Instance.ReturnCurrentSceneName() == "Menu")
+            {
+                Destroy(this.gameObject);
+            }*/
         }
 
         private void Update() 
         {
-            if((ScenesManager.Instance.ReturnCurrentSceneName() == "Game") 
-            && (!GameManager.Instance.IsPlayGame))
+            
+            if(ScenesManager.Instance.ReturnCurrentSceneName() == "Game") 
             {
-                StartLevel();
-            }
-            else if ((GameManager.Instance.IsPlayGame))
-            {
-                GameTimer += Time.deltaTime;
-                StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
-                if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
+                if(!GameManager.Instance.IsPlayGame)
                 {
-                    turnTimer += Time.deltaTime;
-                    EndTurnGame();
+                    StartLevel();
+                }
+                else if (GameManager.Instance.IsPlayGame)
+                {
+                    GameTimer += Time.deltaTime;
+                    StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
+                    if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
+                    {
+                        turnTimer += Time.deltaTime;
+                        EndTurnGame();
+                    }
                 }
             }
         }
@@ -69,12 +76,30 @@ namespace Mechanics
             {
                 levelDifficulty = GameManager.Instance.levelController.GetLevelDifficultyTag();
             }
-            GameManager.Instance.runesConfiguration.ConfigureDictionary();
+            if(GameManager.Instance.runesConfiguration.runesDictionary.Count <= 0)
+            {
+                GameManager.Instance.runesConfiguration.ConfigureDictionary();
+            }
             ChooseRunes(GetRunes());
             ConfigureGrid();
             GameManager.Instance.IsPlayGame = true;
             ResetRunesSkin();
             numRunes = difficulty.quantityPieces / 2;
+        }
+
+        /// <summary>
+        /// End and reset game variables
+        /// </summary>
+        public void FinishLevel()
+        {
+            GameTimer = 0f;
+            treasures = 0;
+            foundRunes = 0;
+            runeSlotShowerIndex.Clear();
+            RunesGrid.Clear();
+
+            Turn.Instance.ResetTurnGame();
+            
         }
         
         /// <summary>
@@ -358,6 +383,7 @@ namespace Mechanics
 }
 
 /* TODO:
+ * Refactor this class, it's too big and full of dependencies
  * Pass ResetRunesSkin() function to other code
  * Create success and error effects and animations and call functions CorrectResult() and WrongResult()
  * Improve the ChooseRunes function, break it into parts and check for possible failures with missing values ​​and variables

@@ -9,7 +9,7 @@ using System;
 using Mechanics;
 
 /// <summary>
-/// ...
+/// Generator and configure grid
 /// </summary>
 namespace MenuUI
 {
@@ -18,8 +18,11 @@ namespace MenuUI
         [HideInInspector] public List<GameObject> slots = new List<GameObject>();
 
         /// <summary>
-        /// ...
+        /// Create the slots on the grid
         /// </summary>
+        /// <param name="quantityPieces">Quantity of pieces that must be created</param>
+        /// <param name="slotPrefab">slot prefab</param>
+        /// <param name="grid">The grid where they should be created</param>
         public void CreateSlotsGrid(int quantityPieces, GameObject slotPrefab, GridLayoutGroup grid)
         {
             if(slotPrefab != null && quantityPieces > 0)
@@ -37,8 +40,9 @@ namespace MenuUI
         }
 
         /// <summary>
-        /// ...
+        /// Get and store all grid slots
         /// </summary>
+        /// <param name="quantityPieces">Quantity of pieces that must be created</param>
         public void GetAllSlotsGrid(int quantityPieces)
         {
             slots = GameObject.FindGameObjectsWithTag("Slot").ToList();
@@ -55,7 +59,7 @@ namespace MenuUI
         }
 
         /// <summary>
-        /// ...
+        /// Configure grid visually
         /// </summary>
         public void ConfigureGrid(ref GridLayoutGroup grid, int gridPaddingLeft, int gridPaddingRight, int gridPaddingTop, int gridPaddingBotton, float gridCellSizeX, float gridCellSizeY, float gridSpacingX, float gridSpacingY)
         {
@@ -71,8 +75,9 @@ namespace MenuUI
         }
 
         /// <summary>
-        /// ...
+        /// Put each rune in a slot
         /// </summary>
+        /// <param name="runes">list of runes</param>
         public void SetRunesOnSlots(List<string> runes)
         {   
             if(runes != null)
@@ -88,3 +93,5 @@ namespace MenuUI
         }
     }
 }
+
+// TODO: Review exchange of grid functions present in UIManager by functions of this class

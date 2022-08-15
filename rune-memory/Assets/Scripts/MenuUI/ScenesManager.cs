@@ -75,5 +75,13 @@ namespace MenuUI
             CurrentSceneName = SceneManager.GetActiveScene().name;
             return CurrentSceneName;
         }
+
+        /// <summary>
+        /// Reload this scene
+        /// </summary>
+        public void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

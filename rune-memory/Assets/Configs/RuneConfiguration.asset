@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneConfig
   runes:
   - runeName: Ehwaz
-    runeDescription: 
+    runeDescription: A text describing the Ehwaz rune
     RuneMainSkin: {fileID: 21300000, guid: 22ab474cba7252b409ec2eff83beda45, type: 3}
     runeSkins:
     - skinName: 
@@ -24,7 +24,7 @@ MonoBehaviour:
     - skinName: 
       skinSprite: {fileID: 0}
   - runeName: Ansuz
-    runeDescription: 
+    runeDescription: A text describing the Ansuz rune
     RuneMainSkin: {fileID: 21300000, guid: d1532f0215e6b4c40824c7d2d810f04c, type: 3}
     runeSkins:
     - skinName: 
@@ -34,7 +34,7 @@ MonoBehaviour:
     - skinName: 
       skinSprite: {fileID: 0}
   - runeName: Berkano
-    runeDescription: 
+    runeDescription: A text describing the Berkano rune
     RuneMainSkin: {fileID: 21300000, guid: ba50cd693045eaf47ad10aec81be2078, type: 3}
     runeSkins:
     - skinName: 

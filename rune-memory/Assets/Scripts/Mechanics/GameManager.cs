@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Save;
+using MenuUI;
 
 /// <summary>
 /// General Game Manager
@@ -28,12 +29,20 @@ namespace Mechanics
         {
             levelController = new LevelController();
             playerStatus = new PlayerStatus();
-            //LocalSave.ClearLocalSave();
+            // LocalSave.ClearLocalSave(); 
             LoadPlayerInfo();
 
             if(IsPaused)
             {
                 PauseGame();
+            }
+        }
+
+        private void Update()
+        {
+            if(ScenesManager.Instance.ReturnCurrentSceneName() != "Game" && IsPlayGame)
+            {
+                IsPlayGame = false;
             }
         }
 
