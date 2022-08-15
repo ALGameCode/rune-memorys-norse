@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - Mechanics.LevelGameManager
     - Mechanics.RuneConfiguration
     - Mechanics.Slot
+    - MenuUI.ActionButton
     - MenuUI.MainMenu
     - MenuUI.ScenesManager
     - MenuUI.SoundButtons
@@ -16,7 +17,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Sprite.Editor.dll:
@@ -116,29 +116,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3316}
     - Class: 114
-      Script: {instanceID: 3758}
+      Script: {instanceID: 3586}
     - Class: 114
-      Script: {instanceID: 4220}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 4556}
+      Script: {instanceID: 4226}
     - Class: 114
-      Script: {instanceID: 4772}
+      Script: {instanceID: 4562}
     - Class: 114
-      Script: {instanceID: 5044}
+      Script: {instanceID: 4778}
     - Class: 114
-      Script: {instanceID: 5182}
+      Script: {instanceID: 5050}
     - Class: 114
-      Script: {instanceID: 5680}
+      Script: {instanceID: 5188}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 5686}
     - Class: 114
-      Script: {instanceID: 6260}
+      Script: {instanceID: 5790}
     - Class: 114
-      Script: {instanceID: 6348}
+      Script: {instanceID: 6266}
     - Class: 114
-      Script: {instanceID: 6878}
+      Script: {instanceID: 6354}
     - Class: 114
-      Script: {instanceID: 58100}
+      Script: {instanceID: 6884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,31 +197,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3316}
     - Class: 114
-      Script: {instanceID: 3678}
+      Script: {instanceID: 3586}
     - Class: 114
-      Script: {instanceID: 3916}
+      Script: {instanceID: 3680}
     - Class: 114
-      Script: {instanceID: 4556}
+      Script: {instanceID: 3852}
     - Class: 114
-      Script: {instanceID: 5044}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 5182}
+      Script: {instanceID: 4562}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 5050}
     - Class: 114
-      Script: {instanceID: 5680}
+      Script: {instanceID: 5188}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 5490}
     - Class: 114
-      Script: {instanceID: 6088}
+      Script: {instanceID: 5686}
     - Class: 114
-      Script: {instanceID: 6338}
+      Script: {instanceID: 5790}
     - Class: 114
-      Script: {instanceID: 6348}
+      Script: {instanceID: 6094}
     - Class: 114
-      Script: {instanceID: 6878}
+      Script: {instanceID: 6344}
     - Class: 114
-      Script: {instanceID: 58100}
+      Script: {instanceID: 6354}
+    - Class: 114
+      Script: {instanceID: 6884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -547,6 +549,12 @@ ScriptsOnlyBuild:
     className: TrackedDeviceRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 519a1054691ad46381656b2822e744f3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MenuUI
+    className: SoundButtons
+  - hash:
+      serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -599,6 +607,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.OnScreen
     className: OnScreenStick
+  - hash:
+      serializedVersion: 2
+      Hash: 6671df66f068c7ac0654ec639a28abea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MenuUI
+    className: ActionButton
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -1055,12 +1069,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 519a1054691ad46381656b2822e744f3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MenuUI
-    className: SoundButtons
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
