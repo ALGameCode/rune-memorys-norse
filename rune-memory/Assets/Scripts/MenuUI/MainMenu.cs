@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using Mechanics;
+using Player;
 
 /// <summary>
 /// UI Element Min Menu Manager

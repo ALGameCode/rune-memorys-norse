@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Player;
 
 /// <summary>
 /// Local save functions
@@ -118,7 +119,6 @@ namespace Save
         /// </summary>
         public static void LoadGeneralGameInfoLocalSave()
         {
-
             Mechanics.GeneralGameInfo.Instance.GameSoundBGMIsMute = PlayerPrefs.GetInt("GameSoundBGMIsMute") == 1;
             Mechanics.GeneralGameInfo.Instance.GameSoundSFXIsMute = PlayerPrefs.GetInt("GameSoundSFXIsMute") == 1;
             Mechanics.GeneralGameInfo.Instance.LastAcessDateTime = System.DateTime.ParseExact(PlayerPrefs.GetString("LastAcessDateTime"), "yyyy/MM/dd hh:mm tt", null);
