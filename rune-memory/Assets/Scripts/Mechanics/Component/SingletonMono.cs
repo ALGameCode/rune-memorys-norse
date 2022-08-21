@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,48 +11,64 @@ using System;
 /// https://gist.github.com/whitebull/a5262e57579f42333899#file-singleton-cs-L24
 /// https://answers.unity.com/questions/17916/singletons-with-coroutines.html
 /// </summary>
-public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
+namespace ALGC
 {
-    private static T instance = null;
-    private static readonly object padlock = new object();
-    public static T Instance
+    public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
     {
-        get
-        {  
-            lock (padlock)
-            {
-                if(instance == null)
+        
+        public bool isDontDestructiveOnLoad = false;
+        public bool takeRoot = false;
+        private static T instance = null;
+        private static readonly object padlock = new object();
+        public static T Instance
+        {
+            get
+            {  
+                lock (padlock)
                 {
-                    instance = (T)FindObjectOfType(typeof(T)); //new T();
                     if(instance == null)
                     {
-                        string goName = typeof(T).ToString();
-                        GameObject go = GameObject.Find(goName);
-                        if(go == null)
+                        instance = (T)FindObjectOfType(typeof(T)); //new T();
+                        if(instance == null)
                         {
-                            go = new GameObject();
-                            go.name = goName;
+                            string goName = typeof(T).ToString();
+                            GameObject go = GameObject.Find(goName);
+                            if(go == null)
+                            {
+                                go = new GameObject();
+                                go.name = goName;
+                            }
+                            instance = go.AddComponent<T>();
                         }
-                        instance = go.AddComponent<T>();
                     }
+                    return instance;
                 }
-                return instance;
-            }
-        }   
-    }
-
-    protected virtual void Awake() 
-    {
-        if (Instance != this)
-        {
-            Destroy(gameObject);
+            }   
         }
 
-        DontDestroyOnLoad(transform.root.gameObject);
-    }
+        protected virtual void Awake() 
+        {
+            if (Instance != this)
+            {
+                Destroy(gameObject);
+            }
 
-    protected virtual void OnApplicationQuit() 
-    {
-        instance = null;
+            if(isDontDestructiveOnLoad)
+            {
+                if(takeRoot)
+                {
+                    DontDestroyOnLoad(transform.root.gameObject);
+                }
+                else
+                {
+                    DontDestroyOnLoad(this.gameObject);
+                }
+            }
+        }
+
+        protected virtual void OnApplicationQuit() 
+        {
+            instance = null;
+        }
     }
 }

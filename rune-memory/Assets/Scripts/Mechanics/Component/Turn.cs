@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using System;
 /// <summary>
 /// Turn controller functions
 /// </summary>
-namespace Mechanics
+namespace ALGC.Mechanics
 {
     public class Turn : Singleton<Turn>
     {
@@ -17,6 +18,7 @@ namespace Mechanics
 
         /// <summary>
         /// Sum new turn to count at the end of the game
+        /// O(1)
         /// </summary>
         public void SumTurns()
         {
@@ -25,6 +27,7 @@ namespace Mechanics
 
         /// <summary>
         /// Reset turn variables
+        /// O(1)
         /// </summary>
         public void ResetTurnGame()
         {
@@ -34,6 +37,7 @@ namespace Mechanics
 
         /// <summary>
         /// Switch to next step after player play
+        /// O(1)
         /// </summary>
         public void NextStep()
         {
@@ -56,6 +60,7 @@ namespace Mechanics
 
         /// <summary>
         /// Executes actions every turn of a turn
+        /// O(1)
         /// </summary>
         public void NextStepAction()
         {

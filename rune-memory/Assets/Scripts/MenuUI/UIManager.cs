@@ -6,12 +6,12 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using Mechanics;
+using ALGC.Mechanics;
 
 /// <summary>
 /// UI Element Manager
 /// </summary>
-namespace MenuUI
+namespace ALGC.MenuUI
 {
     public class UIManager : MonoBehaviour
     {

@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,14 +8,13 @@ using UnityEngine.Audio;
 /// <summary>
 /// Control and settings for in-game music and sounds
 /// </summary>
-namespace Sound
+namespace ALGC.Sound
 {
     [RequireComponent(typeof(AudioSource))]
     public class SoundManager : SingletonMono<SoundManager>
     {
         [Header("Sound Settings Object")]
         public SoundConfiguration soundConfiguration;
-
         public AudioSource SourcePlay { get; private set; }
         
         #region ClassInitialization

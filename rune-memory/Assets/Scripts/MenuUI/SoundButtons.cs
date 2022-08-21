@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Sound;
-using Mechanics;
+using ALGC.Sound;
+using ALGC.Mechanics;
 
 /// <summary>
 /// Music action buttons behavior
 /// </summary>
-namespace MenuUI
+namespace ALGC.MenuUI
 {
     [RequireComponent(typeof(Button))]
     public class SoundButtons : MonoBehaviour

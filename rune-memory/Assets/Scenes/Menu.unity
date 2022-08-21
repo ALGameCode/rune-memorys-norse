@@ -3369,6 +3369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9cbd5e21e61cd4a950a024810fb6c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDontDestructiveOnLoad: 1
+  takeRoot: 1
 --- !u!1 &1345076248
 GameObject:
   m_ObjectHideFlags: 0
@@ -5344,6 +5346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af19ecbe329b5c042ba63ec90234158d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDontDestructiveOnLoad: 1
+  takeRoot: 1
   soundConfiguration: {fileID: 11400000, guid: 7f4d076e84a009543a524a68f48e3268, type: 2}
 --- !u!82 &2023925269
 AudioSource:
@@ -5453,6 +5457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a931908a7df997a47afc55df3e782ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDontDestructiveOnLoad: 1
+  takeRoot: 1
   runesConfiguration: {fileID: 11400000, guid: 44a5f61b4bfd12540b4dd56a609a3261, type: 2}
   levelDifficultyConfiguration: {fileID: 11400000, guid: df44c8204c4cdd64ca670dae8c80e015, type: 2}
 --- !u!1 &2080844980

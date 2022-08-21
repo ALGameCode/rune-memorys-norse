@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,23 +7,29 @@ using UnityEngine;
 /// <summary>
 /// Rune registration and configuration
 /// </summary>
-[CreateAssetMenu(fileName = "RuneConfiguration", menuName = "Configurations/NewRuneConfiguration", order = 1)]
-public class RuneConfiguration : ScriptableObject
+namespace ALGC
 {
-    [Header("Runes Settings")]
-    [SerializeField] private List<Rune> runes = new List<Rune>();
-    
-    public Dictionary<string, Rune> runesDictionary = new Dictionary<string, Rune>();
-
-    public void ConfigureDictionary()
+    [CreateAssetMenu(fileName = "RuneConfiguration", menuName = "Configurations/NewRuneConfiguration", order = 1)]
+    public class RuneConfiguration : ScriptableObject
     {
-        if(runes != null)
+        [Header("Runes Settings")]
+        [SerializeField] private List<Rune> runes = new List<Rune>();
+        
+        public Dictionary<string, Rune> runesDictionary = new Dictionary<string, Rune>();
+
+        /// <summary>
+        /// Configure runes as a dictionary for easy access
+        /// O(n)
+        /// </summary>
+        public void ConfigureDictionary()
         {
-            foreach (var rune in runes)
+            if(runes != null)
             {
-                runesDictionary.Add(rune.runeName, rune);
+                foreach (var rune in runes)
+                {
+                    runesDictionary.Add(rune.runeName, rune);
+                }
             }
         }
     }
 }
-

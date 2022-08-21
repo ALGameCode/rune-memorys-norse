@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// General scene manager
 /// </summary>
-namespace MenuUI
+namespace ALGC.MenuUI
 {
     public class ScenesManager : SingletonMono<ScenesManager>
     {

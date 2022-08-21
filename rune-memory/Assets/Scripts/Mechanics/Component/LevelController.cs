@@ -1,13 +1,14 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mechanics.Component;
+using ALGC.Mechanics.Component;
 
 /// <summary>
 /// Control that will function as a mediator of information between scenes
 /// </summary>
-namespace Mechanics
+namespace ALGC.Mechanics
 {
     public class LevelController
     {

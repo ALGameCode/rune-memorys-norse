@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Save;
-using MenuUI;
-using Player;
+using ALGC.Save;
+using ALGC.MenuUI;
+using ALGC.Player;
 
 /// <summary>
 /// General Game Manager
 /// </summary>
-namespace Mechanics
+namespace ALGC.Mechanics
 {
     public class GameManager : SingletonMono<GameManager>
     {

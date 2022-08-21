@@ -1,11 +1,12 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //using GameAnalyticsSDK;
 
 /// Import Game Analytics
-namespace Analytics
+namespace ALGC.Analytics
 {
     public class GameAnalyticsManager : MonoBehaviour //, IGameAnalyticsATTListener
     {

@@ -6,12 +6,12 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using Mechanics;
+using ALGC.Mechanics;
 
 /// <summary>
 /// Generator and configure grid
 /// </summary>
-namespace MenuUI
+namespace ALGC.MenuUI
 {
     public class GridGame : Singleton<GridGame>
     {

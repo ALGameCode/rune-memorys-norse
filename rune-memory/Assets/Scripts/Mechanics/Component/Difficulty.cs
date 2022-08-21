@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using System;
 /// <summary>
 /// Difficulty Descriptions
 /// </summary>
-namespace Mechanics.Component
+namespace ALGC.Mechanics.Component
 {
     [Serializable]
     public class Difficulty

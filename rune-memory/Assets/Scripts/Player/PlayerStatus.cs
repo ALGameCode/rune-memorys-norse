@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine;
 /// <summary>
 /// Class with description and information about the player and his game history
 /// </summary>
-namespace Player
+namespace ALGC.Player
 {
     public class PlayerStatus
     {

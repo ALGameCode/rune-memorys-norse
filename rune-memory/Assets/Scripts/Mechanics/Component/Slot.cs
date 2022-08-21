@@ -1,4 +1,5 @@
 /// Created by Hellen Caroline Salvato - Project Memory Runes (2022)
+using ALGC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Slot Description and Functions
 /// </summary>
-namespace Mechanics
+namespace ALGC.Mechanics
 {
     [RequireComponent(typeof(Image), typeof(Button))]
     public class Slot : MonoBehaviour
@@ -94,6 +95,7 @@ namespace Mechanics
 
         /// <summary>
         /// Check if the move can be made
+        /// O(1)
         /// </summary>
         /// <returns>If yes return true, if not return false</returns>
         private bool ValidTurnMovement()

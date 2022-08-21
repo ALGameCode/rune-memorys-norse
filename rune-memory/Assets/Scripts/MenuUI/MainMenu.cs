@@ -6,13 +6,13 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using Mechanics;
-using Player;
+using ALGC.Mechanics;
+using ALGC.Player;
 
 /// <summary>
 /// UI Element Min Menu Manager
 /// </summary>
-namespace MenuUI
+namespace ALGC.MenuUI
 {
     public class MainMenu : MonoBehaviour //SingletonMono<MainMenu>
     {

@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Player;
+using ALGC.Player;
 
 /// <summary>
 /// Local save functions
 /// </summary>
-namespace Save
+namespace ALGC.Save
 {
     public class LocalSave : Singleton<LocalSave>
     {

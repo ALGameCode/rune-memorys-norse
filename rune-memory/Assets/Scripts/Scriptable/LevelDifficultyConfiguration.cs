@@ -3,29 +3,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mechanics.Component;
+using ALGC.Mechanics.Component;
 
 /// <summary>
 /// Levels Difficulty registration and configurations
 /// </summary>
-[CreateAssetMenu(fileName = "LevelDifficultyConfiguration", menuName = "Configurations/NewLevelDifficultyConfiguration", order = 2)]
-public class LevelDifficultyConfiguration : ScriptableObject
+namespace ALGC
 {
-    [Header("Difficulties Settings")]
-    public List<Difficulty> difficulties = new List<Difficulty>();
-
-    /// <summary>
-    /// Check you have all the requirements to start the difficulty
-    /// </summary>
-    public bool CheckRequirements(Difficulty dif, int energy, int vikings)
+    [CreateAssetMenu(fileName = "LevelDifficultyConfiguration", menuName = "Configurations/NewLevelDifficultyConfiguration", order = 2)]
+    public class LevelDifficultyConfiguration : ScriptableObject
     {
-        if((energy >= dif.energyRequirements) && (vikings >= dif.vikingsRequirements))
+        [Header("Difficulties Settings")]
+        public List<Difficulty> difficulties = new List<Difficulty>();
+
+        /// <summary>
+        /// Check you have all the requirements to start the difficulty
+        /// O(1)
+        /// </summary>
+        public bool CheckRequirements(Difficulty dif, int energy, int vikings)
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            if((energy >= dif.energyRequirements) && (vikings >= dif.vikingsRequirements))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
