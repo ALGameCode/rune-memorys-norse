@@ -19,13 +19,12 @@ namespace ALGC.Mechanics
         [HideInInspector] public SlotStatus slotStatus = SlotStatus.HIDDEN;
         public int SlotId { get; set; } = 0;
         private Sprite hiddenSprite;
-        private Sprite mySprite => this.gameObject.GetComponent<Image>().sprite;
 
         #region ClassInitialization
 
         private void Start() 
         {
-            hiddenSprite = mySprite;
+            hiddenSprite = this.gameObject.GetComponent<Image>().sprite;
         }
 
         #endregion

@@ -224,6 +224,10 @@ namespace ALGC.Mechanics
             else if ((timer >= limitTime) && (showingAllRunes))
             {
                 HideAllRunes(UIManager.instance.slots);
+                if(UIManager.instance.slots[0].GetComponent<Slot>().slotStatus != SlotStatus.HIDDEN)
+                {
+                    Debug.Log("SLOT 0 IS NOT HIDDEN");
+                }
                 showingAllRunes = false;
                 Debug.Log("HIDE ALL RUNES");
             }
@@ -356,7 +360,7 @@ namespace ALGC.Mechanics
         /// <param name="slotObjects">Slot where the rune is</param>
         public void HideAllRunes(List<GameObject> slotObjects)
         {   
-            Debug.Log($"Hide All Runes: {slotObjects}");
+            Debug.Log($"Hide All Runes: {slotObjects.Count}");
             if(slotObjects != null)
             {
                 foreach(var slot in slotObjects)
