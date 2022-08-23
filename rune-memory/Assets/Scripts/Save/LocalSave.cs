@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using ALGC.Player;
+using ALGC.Mechanics;
 
 /// <summary>
-/// Local save functions
+/// Local save functions using player prefs
 /// </summary>
 namespace ALGC.Save
 {
@@ -63,8 +64,8 @@ namespace ALGC.Save
         /// </summary>
         public static void SaveGeneralGameInfoLocalSave()
         {
-            PlayerPrefs.SetInt("GameSoundBGMIsMute", Mechanics.GeneralGameInfo.Instance.GameSoundBGMIsMute ? 1 : 0);
-            PlayerPrefs.SetInt("GameSoundSFXIsMute", Mechanics.GeneralGameInfo.Instance.GameSoundSFXIsMute ? 1 : 0);
+            PlayerPrefs.SetInt("GameSoundBGMIsMute", GameStatus.Instance.GameSoundBGMIsMute ? 1 : 0);
+            PlayerPrefs.SetInt("GameSoundSFXIsMute", GameStatus.Instance.GameSoundSFXIsMute ? 1 : 0);
             PlayerPrefs.SetString("LastAcessDateTime", System.DateTime.Now.ToString("yyyy/MM/dd hh:mm tt"));
         }
         
@@ -119,9 +120,9 @@ namespace ALGC.Save
         /// </summary>
         public static void LoadGeneralGameInfoLocalSave()
         {
-            Mechanics.GeneralGameInfo.Instance.GameSoundBGMIsMute = PlayerPrefs.GetInt("GameSoundBGMIsMute") == 1;
-            Mechanics.GeneralGameInfo.Instance.GameSoundSFXIsMute = PlayerPrefs.GetInt("GameSoundSFXIsMute") == 1;
-            Mechanics.GeneralGameInfo.Instance.LastAcessDateTime = System.DateTime.ParseExact(PlayerPrefs.GetString("LastAcessDateTime"), "yyyy/MM/dd hh:mm tt", null);
+            GameStatus.Instance.GameSoundBGMIsMute = PlayerPrefs.GetInt("GameSoundBGMIsMute") == 1;
+            GameStatus.Instance.GameSoundSFXIsMute = PlayerPrefs.GetInt("GameSoundSFXIsMute") == 1;
+            GameStatus.Instance.LastAcessDateTime = System.DateTime.ParseExact(PlayerPrefs.GetString("LastAcessDateTime"), "yyyy/MM/dd hh:mm tt", null);
         }
 
         /// <summary>

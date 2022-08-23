@@ -39,10 +39,6 @@ namespace ALGC.Mechanics
                 UIManager.instance.ShowVikingTextUI(GameManager.Instance.playerStatus.ActiveVikings, GameManager.Instance.playerStatus.TotalVikings);
                 UIManager.instance.ShowTreasuresTextUI(treasures);
             }
-            /*else if(ScenesManager.Instance.ReturnCurrentSceneName() == "Menu")
-            {
-                Destroy(this.gameObject);
-            }*/
         }
 
         private void Update() 
@@ -218,15 +214,18 @@ namespace ALGC.Mechanics
         /// <param name="limitTime">Timeout to memorize</param>
         private void StartMemorization(float timer, float limitTime)
         {
+            //Debug.Log($"TIMER: {timer} LIMIT: {limitTime} showing: {showingAllRunes}");
             if((timer <= limitTime) && (!showingAllRunes))
             {
                 ShowAllRunes(UIManager.instance.slots);
                 showingAllRunes = true;
+                Debug.Log("SHOW ALL RUNES");
             }
             else if ((timer >= limitTime) && (showingAllRunes))
             {
                 HideAllRunes(UIManager.instance.slots);
                 showingAllRunes = false;
+                Debug.Log("HIDE ALL RUNES");
             }
         }
 
@@ -356,7 +355,8 @@ namespace ALGC.Mechanics
         /// </summary>
         /// <param name="slotObjects">Slot where the rune is</param>
         public void HideAllRunes(List<GameObject> slotObjects)
-        {
+        {   
+            Debug.Log($"Hide All Runes: {slotObjects}");
             if(slotObjects != null)
             {
                 foreach(var slot in slotObjects)
