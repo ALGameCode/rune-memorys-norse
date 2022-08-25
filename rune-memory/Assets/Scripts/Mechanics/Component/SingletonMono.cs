@@ -19,30 +19,26 @@ namespace ALGC
         public bool isDontDestructiveOnLoad = false;
         public bool takeRoot = false;
         private static T instance = null;
-        private static readonly object padlock = new object();
         public static T Instance
         {
             get
-            {  
-                lock (padlock)
+            {
+                if(instance == null)
                 {
+                    instance = (T)FindObjectOfType(typeof(T));
                     if(instance == null)
                     {
-                        instance = (T)FindObjectOfType(typeof(T)); //new T();
-                        if(instance == null)
+                        string goName = typeof(T).ToString();
+                        GameObject go = GameObject.Find(goName);
+                        if(go == null)
                         {
-                            string goName = typeof(T).ToString();
-                            GameObject go = GameObject.Find(goName);
-                            if(go == null)
-                            {
-                                go = new GameObject();
-                                go.name = goName;
-                            }
-                            instance = go.AddComponent<T>();
+                            go = new GameObject();
+                            go.name = goName;
                         }
+                        instance = go.AddComponent<T>();
                     }
-                    return instance;
                 }
+                return instance;
             }   
         }
 
