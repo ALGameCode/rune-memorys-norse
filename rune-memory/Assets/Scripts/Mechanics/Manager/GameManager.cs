@@ -24,6 +24,12 @@ namespace ALGC.Mechanics
         public bool IsPlayGame { get; set; } = false;
         public bool IsSoundMute { get; set; } = false;
 
+        #region Dev-Tools
+            #if UNITY_EDITOR
+                //...
+            #endif
+        #endregion
+
         #region ClassInitialization
 
         private void Start()

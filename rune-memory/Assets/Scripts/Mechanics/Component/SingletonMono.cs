@@ -19,7 +19,8 @@ namespace ALGC
         public bool isDontDestructiveOnLoad = false;
         public bool takeRoot = false;
         private static T instance = null;
-        public static T Instance
+        // NOTE: So, an instance inside get will only be created when it is called, so this can cause problems
+        public static T Instance 
         {
             get
             {
