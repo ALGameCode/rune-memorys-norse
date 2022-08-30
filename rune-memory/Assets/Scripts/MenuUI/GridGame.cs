@@ -13,7 +13,7 @@ using ALGC.Mechanics;
 /// </summary>
 namespace ALGC.MenuUI
 {
-    public class GridGame : Singleton<GridGame>
+    public class GridGame
     {
         [HideInInspector] public List<GameObject> slots = new List<GameObject>();
 
@@ -86,7 +86,7 @@ namespace ALGC.MenuUI
                 {
                     for(int i = 0; i < slots.Count; i++)
                     {
-                        slots[i].GetComponent<Slot>().ThisRune = LevelGameManager.Instance.GetRuneByName(runes[i]);
+                        slots[i].GetComponent<Slot>().ThisRune = GameManager.Instance.levelManager.GetRuneByName(runes[i]);
                     }
                 }
             }

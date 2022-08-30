@@ -10,9 +10,15 @@ using UnityEngine.SceneManagement;
 /// </summary>
 namespace ALGC.MenuUI
 {
-    public class ScenesManager : SingletonMono<ScenesManager>
+    public class ScenesManager : Singleton<ScenesManager>
     {
-        public string CurrentSceneName { get; private set; }
+        public string CurrentSceneName 
+        {
+            get
+            {
+                return SceneManager.GetActiveScene().name;
+            }
+        }
     
         /// <summary>
         /// Change scene by name
@@ -57,24 +63,6 @@ namespace ALGC.MenuUI
                 return true;
             }
             return false;
-        }
-
-        /// <summary>
-        /// Get the name of the current scene and store it in the CurrentSceneName variable leaving it available for the system to use.
-        /// </summary>
-        public void GetCurrentSceneName() 
-        {
-            CurrentSceneName = SceneManager.GetActiveScene().name;
-        }
-
-        /// <summary>
-        /// Get the name of the current scene and store it in the CurrentSceneName variable leaving it available for the system to use.
-        /// </summary>
-        /// <returns>Return Current Scene Name</returns>
-        public string ReturnCurrentSceneName() 
-        {
-            CurrentSceneName = SceneManager.GetActiveScene().name;
-            return CurrentSceneName;
         }
 
         /// <summary>

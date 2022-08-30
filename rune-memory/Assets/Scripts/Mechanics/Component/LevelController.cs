@@ -39,7 +39,7 @@ namespace ALGC.Mechanics
         {
             int viking = GameManager.Instance.playerStatus.ActiveVikings;
             int energy = GameManager.Instance.playerStatus.TotalEnergy;
-            Difficulty dif = LevelGameManager.Instance.GetDifficultySettings(difficulty);
+            Difficulty dif = GameManager.Instance.levelDifficultyConfiguration.GetDifficultySettings(difficulty);
             if(GameManager.Instance.levelDifficultyConfiguration.CheckRequirements(dif, energy, viking))
             {
                 return true;

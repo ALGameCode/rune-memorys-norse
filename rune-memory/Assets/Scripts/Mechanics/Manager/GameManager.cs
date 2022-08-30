@@ -24,11 +24,7 @@ namespace ALGC.Mechanics
         public bool IsPlayGame { get; set; } = false;
         public bool IsSoundMute { get; set; } = false;
 
-        #region Dev-Tools
-            #if UNITY_EDITOR
-                //...
-            #endif
-        #endregion
+        public LevelGameManager levelManager;
 
         #region ClassInitialization
 
@@ -47,9 +43,22 @@ namespace ALGC.Mechanics
 
         private void Update()
         {
-            if(ScenesManager.Instance.ReturnCurrentSceneName() != "Game" && IsPlayGame)
+            if(ScenesManager.Instance.CurrentSceneName != "Game" && IsPlayGame)
             {
                 IsPlayGame = false;
+                levelManager = null;
+            }
+            else if(ScenesManager.Instance.CurrentSceneName.Equals("Game") && !IsPlayGame)
+            {
+                levelManager = new LevelGameManager();
+                levelManager.StartLevel();
+            }
+            else if(ScenesManager.Instance.CurrentSceneName.Equals("Game") && IsPlayGame)
+            {
+                if(levelManager != null)
+                {
+                    levelManager.RunLevel();
+                }
             }
         }
 

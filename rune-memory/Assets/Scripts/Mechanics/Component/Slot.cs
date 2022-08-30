@@ -39,7 +39,7 @@ namespace ALGC.Mechanics
             {
                 ShowRune();
                 Turn.Instance.NextStep();
-                LevelGameManager.Instance.runeSlotShowerIndex.Add(SlotId);
+                GameManager.Instance.levelManager.runeSlotShowerIndex.Add(SlotId);
             }
         }
 

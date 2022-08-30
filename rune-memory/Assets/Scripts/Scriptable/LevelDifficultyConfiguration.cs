@@ -31,5 +31,22 @@ namespace ALGC
                 return false;
             }
         }
+
+        /// <summary>
+        /// Browse or choose difficulty setting
+        /// </summary>
+        /// <param name="levelDifficultySet">Difficulty type selected by tag</param>
+        /// <returns>Selected difficulty setup</returns>
+        public Difficulty GetDifficultySettings(LevelDifficultyTag levelDifficultySet)
+        {
+            foreach(var dif in difficulties)
+            {
+                if(dif.levelDifficultyTag == levelDifficultySet)
+                {
+                    return dif;
+                }
+            }
+            return null;
+        }
     }
 }

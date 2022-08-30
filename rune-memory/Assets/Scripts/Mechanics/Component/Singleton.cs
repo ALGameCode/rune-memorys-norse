@@ -8,6 +8,8 @@ using System;
 /// <summary>
 /// Abstract and generalist singleton class to facilitate 
 /// the application of the singleton pattern in other classes
+/// Undertand Singleton problems: https://pt.stackoverflow.com/questions/18860/por-que-n%C3%A3o-devemos-usar-singleton
+/// Singleton Patterns: https://refactoring.guru/pt-br/design-patterns/singleton
 /// </summary>
 namespace ALGC
 {

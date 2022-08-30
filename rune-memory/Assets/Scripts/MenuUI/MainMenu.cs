@@ -14,7 +14,7 @@ using ALGC.Player;
 /// </summary>
 namespace ALGC.MenuUI
 {
-    public class MainMenu : MonoBehaviour //SingletonMono<MainMenu>
+    public class MainMenu : MonoBehaviour
     {
         #region MainMenu
 

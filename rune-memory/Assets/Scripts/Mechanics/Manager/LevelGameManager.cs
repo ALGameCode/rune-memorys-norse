@@ -12,8 +12,8 @@ using ALGC.Mechanics.Component;
 /// </summary>
 namespace ALGC.Mechanics
 {
-    public class LevelGameManager : SingletonMono<LevelGameManager>
-    {      
+    public class LevelGameManager
+    {
         [Header("Level Settings")]
         public LevelDifficultyTag levelDifficulty = LevelDifficultyTag.EASY;
         public float turnTimer = 0f;
@@ -28,45 +28,9 @@ namespace ALGC.Mechanics
         private const int treasuresPerRune = 10; // TODO: Define on setup level/difficulty
         private int foundRunes = 0;
         private int numRunes = 0;
-        
-        #region ClassInitialization
-
-        private void Start()
-        {
-            if(ScenesManager.Instance.ReturnCurrentSceneName() == "Game")
-            {
-                StartLevel();
-                UIManager.instance.ShowVikingTextUI(GameManager.Instance.playerStatus.ActiveVikings, GameManager.Instance.playerStatus.TotalVikings);
-                UIManager.instance.ShowTreasuresTextUI(treasures);
-            }
-        }
-
-        private void Update() 
-        {
-            
-            if(ScenesManager.Instance.ReturnCurrentSceneName() == "Game") 
-            {
-                if(!GameManager.Instance.IsPlayGame)
-                {
-                    StartLevel();
-                }
-                else if (GameManager.Instance.IsPlayGame)
-                {
-                    GameTimer += Time.deltaTime;
-                    StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
-                    if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
-                    {
-                        turnTimer += Time.deltaTime;
-                        EndTurnGame();
-                    }
-                }
-            }
-        }
-
-        #endregion
 
         /// <summary>
-        /// Start creating the level
+        /// Start creating the level // TODO: Pass GameManager.Instance by parameter
         /// </summary>
         public void StartLevel()
         {
@@ -83,6 +47,23 @@ namespace ALGC.Mechanics
             GameManager.Instance.IsPlayGame = true;
             ResetRunesSkin();
             numRunes = difficulty.quantityPieces / 2;
+
+            UIManager.instance.ShowVikingTextUI(GameManager.Instance.playerStatus.ActiveVikings, GameManager.Instance.playerStatus.TotalVikings);
+            UIManager.instance.ShowTreasuresTextUI(treasures);
+        }
+
+        /// <summary>
+        /// ...
+        /// </summary>
+        public void RunLevel()
+        {
+            GameTimer += Time.deltaTime;
+            StartMemorization(GameTimer, difficulty.startingTimeShowRunes);
+            if(Turn.Instance.TurnController == TurnStep.SECOND_PIECE)
+            {
+                turnTimer += Time.deltaTime;
+                EndTurnGame();
+            }
         }
 
         /// <summary>
@@ -105,6 +86,7 @@ namespace ALGC.Mechanics
         /// </summary>
         private void ConfigureGrid ()
         {
+            //UIManager.instance.gridGame.CreateSlotsGrid(difficulty.quantityPieces);
             UIManager.instance.CreateSlotsGrid(difficulty.quantityPieces);
             UIManager.instance.ConfigureGrid(difficulty.gridPaddingLeft, difficulty.gridPaddingRight, 
             difficulty.gridPaddingTop, difficulty.gridPaddingBotton, difficulty.gridCellSizeX, 
@@ -142,7 +124,7 @@ namespace ALGC.Mechanics
             {
                 list = newList;
 
-                difficulty = GetDifficultySettings(levelDifficulty);
+                difficulty = GameManager.Instance.levelDifficultyConfiguration.GetDifficultySettings(levelDifficulty);
 
                 // Get the result and remove the same number of items from the list
                 int numRunesRemove = list.Count - (difficulty.quantityPieces / 2);
@@ -165,24 +147,6 @@ namespace ALGC.Mechanics
             }
 
         }
-
-        /// <summary>
-        /// Browse or choose difficulty setting
-        /// </summary>
-        /// <param name="levelDifficultySet">Difficulty type selected by tag</param>
-        /// <returns>Selected difficulty setup</returns>
-        public Difficulty GetDifficultySettings(LevelDifficultyTag levelDifficultySet)
-        {
-            foreach(var dif in GameManager.Instance.levelDifficultyConfiguration.difficulties)
-            {
-                if(dif.levelDifficultyTag == levelDifficultySet)
-                {
-                    return dif;
-                }
-            }
-            return null;
-        }    
-
         
         #region OnGameFunctions
 

@@ -68,6 +68,7 @@ namespace ALGC.MenuUI
         #endregion
 
         [HideInInspector] public List<GameObject> slots = new List<GameObject>();
+        public GridGame gridGame = new GridGame();
 
         #region ClassInitialization
 
@@ -164,7 +165,7 @@ namespace ALGC.MenuUI
                 {
                     for(int i = 0; i < slots.Count; i++)
                     {
-                        slots[i].GetComponent<Slot>().ThisRune = LevelGameManager.Instance.GetRuneByName(runes[i]);
+                        slots[i].GetComponent<Slot>().ThisRune = GameManager.Instance.levelManager.GetRuneByName(runes[i]);
                     }
                 }
             }
@@ -179,12 +180,12 @@ namespace ALGC.MenuUI
         /// </summary>
         public void ShowEndGameScreen()
         {
-            endTreasuresText.text = $"+ {LevelGameManager.Instance.treasures}";
+            endTreasuresText.text = $"+ {GameManager.Instance.levelManager.treasures}";
             endVikingsText.text = $"{GameManager.Instance.playerStatus.ActiveVikings}/{GameManager.Instance.playerStatus.TotalVikings}";
             endTimeText.text = timerText.text.ToString();
             endRoundsText.text = Turn.Instance.TotalTurns.ToString();
             //endExperienceText = ; // TODO: Calculate experience based on lost treasures, time, rounds and vikings
-            GameManager.Instance.playerStatus.Treasures += LevelGameManager.Instance.treasures;
+            GameManager.Instance.playerStatus.Treasures += GameManager.Instance.levelManager.treasures;
         }
 
         /// <summary>
@@ -202,7 +203,7 @@ namespace ALGC.MenuUI
             pauseGameButton.interactable = false;
             GameManager.Instance.PauseGame();
             GameManager.Instance.SaveAllPlayerInfo(); // TODO: When adding bonus call this later
-            LevelGameManager.Instance.FinishLevel();
+            GameManager.Instance.levelManager.FinishLevel();
         }
 
         /// <summary>
@@ -217,7 +218,7 @@ namespace ALGC.MenuUI
             pauseGameButton.interactable = false;
             GameManager.Instance.PauseGame();
             GameManager.Instance.SaveAllPlayerInfo();
-            LevelGameManager.Instance.FinishLevel();
+            GameManager.Instance.levelManager.FinishLevel();
         }
 
         /// <summary>
@@ -233,7 +234,7 @@ namespace ALGC.MenuUI
             escapedBackgroundImage.SetActive(true);
             //GameManager.Instance.PauseGame();
             GameManager.Instance.SaveAllPlayerInfo(); // TODO: When adding bonus call this later
-            LevelGameManager.Instance.FinishLevel();
+            GameManager.Instance.levelManager.FinishLevel();
         }
 
         /// <summary>
@@ -278,7 +279,7 @@ namespace ALGC.MenuUI
         public void ShowTimer()
         {
             int hour, minute, second;
-            float timer = LevelGameManager.Instance.GameTimer;
+            float timer = GameManager.Instance.levelManager.GameTimer;
             minute = (int)timer/60;
             hour = minute/60;
             second = (int)timer % 60;
