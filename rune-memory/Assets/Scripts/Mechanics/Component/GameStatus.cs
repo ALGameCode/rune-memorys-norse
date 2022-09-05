@@ -11,7 +11,7 @@ using System;
 /// </summary>
 namespace ALGC.Mechanics
 {
-    public class GameStatus : Singleton<GameStatus>
+    public class GameStatus
     {
         public bool GameSoundBGMIsMute { get; set; } = false;
         public bool GameSoundSFXIsMute { get; set; } = false;

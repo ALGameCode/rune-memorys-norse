@@ -19,6 +19,7 @@ namespace ALGC.Mechanics
 
         [HideInInspector] public LevelController levelController = null;
         [HideInInspector] public PlayerStatus playerStatus = null;
+        [HideInInspector] public GameStatus gameStatus = null;
 
         public bool IsPaused { get; private set; } = false;
         public bool IsPlayGame { get; set; } = false;
@@ -73,13 +74,11 @@ namespace ALGC.Mechanics
             {
                 LocalSave.LoadPlayerInfoLocalSave(ref playerStatus);
                 LocalSave.LoadPlayerGameInfoLocalSave(ref playerStatus);
-                LocalSave.LoadGeneralGameInfoLocalSave();
+                LocalSave.LoadGeneralGameInfoLocalSave(ref gameStatus);
             }
             else
             {
-                LocalSave.SavePlayerInfoLocalSave(playerStatus);
-                LocalSave.SavePlayerGameInfoLocalSave(playerStatus);
-                LocalSave.SaveGeneralGameInfoLocalSave();
+                SaveAllPlayerInfo();
             }
             // TODO: Get and Set Cloud Save
         }
@@ -91,7 +90,7 @@ namespace ALGC.Mechanics
         {
             LocalSave.SavePlayerInfoLocalSave(playerStatus);
             LocalSave.SavePlayerGameInfoLocalSave(playerStatus);
-            LocalSave.SaveGeneralGameInfoLocalSave();
+            LocalSave.SaveGeneralGameInfoLocalSave(gameStatus);
         }
 
         /// <summary>

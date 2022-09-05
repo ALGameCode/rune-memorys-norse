@@ -55,16 +55,17 @@ namespace ALGC.Mechanics
                 default:
                     break;
             }
-            NextStepAction();
+            NextStepAction(TurnController);
         }
 
         /// <summary>
         /// Executes actions every turn of a turn
         /// O(1)
         /// </summary>
-        public void NextStepAction()
+        /// <param name="turnStep">enum actual turn step</param>
+        public void NextStepAction(TurnStep turnStep)
         {
-            switch (TurnController)
+            switch (turnStep)
             {
                 case TurnStep.IDLE:
                     // ...
