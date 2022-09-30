@@ -359,3 +359,16 @@ namespace ALGC.Mechanics
  * Improve the ChooseRunes function, break it into parts and check for possible failures with missing values ​​and variables
  * 
 */
+
+/*
+private bool CheckTimeOut(ref float time, float limit)
+        {
+            if(limit <= time)
+            {
+                time = 0f;
+                return true;
+            }
+            return false;
+        }
+
+*/

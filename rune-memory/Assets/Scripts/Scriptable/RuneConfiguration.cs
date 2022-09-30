@@ -14,7 +14,7 @@ namespace ALGC
     {
         [Header("Runes Settings")]
         [SerializeField] private List<Rune> runes = new List<Rune>();
-        
+
         public Dictionary<string, Rune> runesDictionary = new Dictionary<string, Rune>();
 
         /// <summary>
@@ -30,6 +30,11 @@ namespace ALGC
                     runesDictionary.Add(rune.runeName, rune);
                 }
             }
+        }
+
+        private void Awake() 
+        {
+            ConfigureDictionary();
         }
     }
 }
