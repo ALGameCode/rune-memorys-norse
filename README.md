@@ -1,5 +1,7 @@
 # rune-memorys-norse
  A runes and vikings memory game
+ 
+ _<https://carolsalvato.itch.io/rune-memory-vikings-adventures>_
 
 ## Sobre
 Esse projeto é um protótipo em desenvolvimento de um jogo casual para plataforma mobile (Android) com temática viking. A principal mecânica do jogo é o clássico jogo da memória, onde um conjunto de pares de imagens são misturados e virados de cabeça para baixo, para que assim o jogador tente encontrar os pares usando apenas sua memória.
