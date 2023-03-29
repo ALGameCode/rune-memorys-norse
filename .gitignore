@@ -73,4 +73,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 *.tar.7z
-rune-memory/Library/ArtifactDB
+rune-memory/Library/ArtifactDB~
+
+rune-memory/Library/PackageCache/com.unity.burst@*/.Runtime/hostmac/

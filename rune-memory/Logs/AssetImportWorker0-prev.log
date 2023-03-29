@@ -1,1038 +1,422 @@
 Using pre-set license
-Built from '2020.3/release' branch; Version is '2020.3.7f1 (dd97f2c94397) revision 14522354'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19044.1889; Version 2009; 64bit' Language: 'pt' Physical Memory: 32699 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'pt' Physical Memory: 32699 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
- COMMAND LINE ARGUMENTS:
-F:\Program Files\Unity\Hub\Editor\2020.3.7f1\Editor\Unity.exe
+COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\Hub\Editor\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-F:/Documentos/UnityProjects/rune-memory/rune-memorys-norse/rune-memory
+D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63847
-Successfully changed project path to: F:/Documentos/UnityProjects/rune-memory/rune-memorys-norse/rune-memory
-F:/Documentos/UnityProjects/rune-memory/rune-memorys-norse/rune-memory
-Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 66.61 ms, found 1 plugins.
+60179
+Successfully changed project path to: D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
+D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [1288] Host "[IP] 192.168.0.175 [Port] 0 [Flags] 2 [Guid] 104532121 [EditorId] 104532121 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F9GHF2T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [1288] Host "[IP] 192.168.0.175 [Port] 0 [Flags] 2 [Guid] 104532121 [EditorId] 104532121 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F9GHF2T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 74.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.7f1 (dd97f2c94397)
-[Subsystems] Discovering subsystems at path F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path F:/Documentos/UnityProjects/rune-memory/rune-memorys-norse/rune-memory/Assets
-GfxDevice: creating device client; threaded=0
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Hub/Editor/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
-    Vendor:   
-    VRAM:     5991 MB
-    Driver:   31.0.15.1640
+    Vendor:   NVIDIA
+    VRAM:     5980 MB
+    Driver:   31.0.15.2802
 Initialize mono
-Mono path[0] = 'F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
-Mono path[1] = 'F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
+Mono path[0] = 'D:/Program Files/Unity/Hub/Editor/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/Hub/Editor/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files/Unity/Hub/Editor/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: F:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.001866 seconds.
-Native extension for LinuxStandalone target not found
+Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.005335 seconds.
+Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 74.58 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 64.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.419 seconds
+- Completed reload, in  0.635 seconds
+Domain Reload Profiling:
+	ReloadAssembly (636ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (427ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (107ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (244ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (42ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (64ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (93ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004134 seconds.
+Registered in 0.008705 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 59.69 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 64.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.962 seconds
+- Completed reload, in  1.140 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1141ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (893ms)
+			LoadAssemblies (140ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (212ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (483ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (65ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (276ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2784 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.9 MB.
-System memory in use after: 116.9 MB.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 65 unused Assets / (57.3 KB). Loaded Objects now: 3714.
+Memory consumption went from 138.7 MB to 138.6 MB.
+Total: 4.073900 ms (FindLiveObjects: 0.351400 ms CreateObjectMapping: 0.089000 ms MarkObjects: 3.527600 ms  DeleteObjects: 0.105000 ms)
 
-Unloading 58 unused Assets to reduce memory usage. Loaded Objects now: 3199.
-Total: 2.565700 ms (FindLiveObjects: 0.315900 ms CreateObjectMapping: 0.090300 ms MarkObjects: 2.023800 ms  DeleteObjects: 0.134900 ms)
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Configs/RuneConfiguration.asset
-  artifactKey: Guid(44a5f61b4bfd12540b4dd56a609a3261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Configs/RuneConfiguration.asset using Guid(44a5f61b4bfd12540b4dd56a609a3261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1098537236bd7d256d0afb5b163eacd0') in 0.787855 seconds
-  Import took 0.792194 seconds .
-
+  Time since last request: 1166709.777924 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png
+  artifactKey: Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png using Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2e9f26fffd26f8981970c47cbde1ced') in 0.158232 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 105.598425 seconds.
-  path: Assets/Scripts/MenuUI/MainMenu.cs
-  artifactKey: Guid(5c5e474c531868f41b90597b14d5099c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/MainMenu.cs using Guid(5c5e474c531868f41b90597b14d5099c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8c66d21b6ffb7169d59ac35db296b4') in 0.010876 seconds
-  Import took 0.015470 seconds .
-
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png
+  artifactKey: Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png using Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4298f3873e17e9b8fa0207aab1f50523') in 0.009480 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.516819 seconds.
-  path: Assets/Scripts/MenuUI/ScenesManager.cs
-  artifactKey: Guid(af9cbd5e21e61cd4a950a024810fb6c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/ScenesManager.cs using Guid(af9cbd5e21e61cd4a950a024810fb6c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f58ca33159b2534a1fabb2c7488dc3d') in 0.002043 seconds
-  Import took 0.006111 seconds .
-
+  Time since last request: 33.410958 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png
+  artifactKey: Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png using Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e29ffb4beec75a5e0b45a2dff319f477') in 0.026929 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.072588 seconds.
-  path: Assets/Scripts/MenuUI/SoundButtons.cs
-  artifactKey: Guid(953e5f632102e5941b17e6beaa530fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/SoundButtons.cs using Guid(953e5f632102e5941b17e6beaa530fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd01f9a188a7de68cb967ff6e59b5cdcc') in 0.001948 seconds
-  Import took 0.005652 seconds .
-
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png
+  artifactKey: Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png using Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '385fef023a8d27ee3b01ce232cf22d69') in 0.007243 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.032086 seconds.
-  path: Assets/Scripts/MenuUI/SoundButtons.cs
-  artifactKey: Guid(953e5f632102e5941b17e6beaa530fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/SoundButtons.cs using Guid(953e5f632102e5941b17e6beaa530fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd01f9a188a7de68cb967ff6e59b5cdcc') in 0.001785 seconds
-  Import took 0.005710 seconds .
-
+  Time since last request: 19.108210 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png
+  artifactKey: Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png using Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6a2dad7adabf783e502c55d876e7cfb') in 0.021451 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.007867 seconds.
-  path: Assets/Scripts/MenuUI/ActionButton.cs
-  artifactKey: Guid(b250bc62868e3e94ea4a892a64484c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/ActionButton.cs using Guid(b250bc62868e3e94ea4a892a64484c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741db6aa46f0588167bcb2b4c2727984') in 0.001880 seconds
-  Import took 0.005552 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005175 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.861 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.9 MB.
-System memory in use after: 116.0 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3204.
-Total: 2.891800 ms (FindLiveObjects: 0.309000 ms CreateObjectMapping: 0.083700 ms MarkObjects: 2.355400 ms  DeleteObjects: 0.142500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png
+  artifactKey: Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png using Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c82a1a007ec03651eb164f44def23be0') in 0.007444 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 539.362368 seconds.
-  path: Assets/Scripts/MenuUI/ActionButton.cs
-  artifactKey: Guid(b250bc62868e3e94ea4a892a64484c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/ActionButton.cs using Guid(b250bc62868e3e94ea4a892a64484c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c03e8211ec057b1af515073206549e25') in 0.006864 seconds
-  Import took 0.011625 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004783 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.884 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.9 MB.
-System memory in use after: 116.0 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3208.
-Total: 2.510900 ms (FindLiveObjects: 0.289700 ms CreateObjectMapping: 0.085500 ms MarkObjects: 2.010100 ms  DeleteObjects: 0.124700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  Time since last request: 185.642971 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png
+  artifactKey: Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png using Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a4853e5f5f91c3daea60861957639e3') in 0.008767 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 41.052919 seconds.
-  path: Assets/Scripts/Store
-  artifactKey: Guid(05d10f918cff9a443866c1e10e164f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Store using Guid(05d10f918cff9a443866c1e10e164f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '271c32a99cd30e4b64d646410f72ec72') in 0.006219 seconds
-  Import took 0.010398 seconds .
-
+  Time since last request: 31.161299 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png
+  artifactKey: Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png using Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4529375a021f3fdc6fc98c86717edea9') in 0.006816 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.002545 seconds.
-  path: Assets/Scripts/Store
-  artifactKey: Guid(05d10f918cff9a443866c1e10e164f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Store using Guid(05d10f918cff9a443866c1e10e164f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '271c32a99cd30e4b64d646410f72ec72') in 0.002710 seconds
-  Import took 0.006964 seconds .
-
+  Time since last request: 83.094547 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png
+  artifactKey: Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-grass.png using Guid(952fe9b1af793de4884ba34ddc2d5ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe95cafe1e511e523c06e936c6ee860') in 0.037528 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 53.416755 seconds.
-  path: Assets/Scripts/Village
-  artifactKey: Guid(57239e85ad6e2d24da1a0ca1d0536a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Village using Guid(57239e85ad6e2d24da1a0ca1d0536a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd993db1135bc5f1ca8a10750e819b6c6') in 0.002774 seconds
-  Import took 0.006906 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003985 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.878 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3212.
-Total: 2.394600 ms (FindLiveObjects: 0.323200 ms CreateObjectMapping: 0.089800 ms MarkObjects: 1.860100 ms  DeleteObjects: 0.120400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003902 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.886 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3216.
-Total: 3.212100 ms (FindLiveObjects: 0.509200 ms CreateObjectMapping: 0.099800 ms MarkObjects: 2.465500 ms  DeleteObjects: 0.135400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004029 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.889 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.9 MB.
-System memory in use after: 116.0 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3220.
-Total: 2.548800 ms (FindLiveObjects: 0.289900 ms CreateObjectMapping: 0.076500 ms MarkObjects: 2.052800 ms  DeleteObjects: 0.128200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003826 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.899 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3224.
-Total: 2.645500 ms (FindLiveObjects: 0.313000 ms CreateObjectMapping: 0.076000 ms MarkObjects: 2.119600 ms  DeleteObjects: 0.136000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003767 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.901 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3228.
-Total: 2.785100 ms (FindLiveObjects: 0.331400 ms CreateObjectMapping: 0.084200 ms MarkObjects: 2.217800 ms  DeleteObjects: 0.150400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003758 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.923 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3232.
-Total: 2.611700 ms (FindLiveObjects: 0.324700 ms CreateObjectMapping: 0.076500 ms MarkObjects: 2.077300 ms  DeleteObjects: 0.131800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003681 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.896 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3236.
-Total: 2.561600 ms (FindLiveObjects: 0.311300 ms CreateObjectMapping: 0.075800 ms MarkObjects: 2.046300 ms  DeleteObjects: 0.127200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006234 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.954 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3240.
-Total: 3.051100 ms (FindLiveObjects: 0.317100 ms CreateObjectMapping: 0.076300 ms MarkObjects: 2.517900 ms  DeleteObjects: 0.138500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003749 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3244.
-Total: 2.613100 ms (FindLiveObjects: 0.343600 ms CreateObjectMapping: 0.084600 ms MarkObjects: 2.032700 ms  DeleteObjects: 0.151300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003760 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.925 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3248.
-Total: 2.707600 ms (FindLiveObjects: 0.394000 ms CreateObjectMapping: 0.168000 ms MarkObjects: 2.005300 ms  DeleteObjects: 0.139400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003834 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.889 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3252.
-Total: 2.532500 ms (FindLiveObjects: 0.310300 ms CreateObjectMapping: 0.078000 ms MarkObjects: 2.022200 ms  DeleteObjects: 0.121000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003593 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.897 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3256.
-Total: 2.774000 ms (FindLiveObjects: 0.366200 ms CreateObjectMapping: 0.086600 ms MarkObjects: 2.195400 ms  DeleteObjects: 0.124700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003730 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.962 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 116.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3260.
-Total: 2.444800 ms (FindLiveObjects: 0.354200 ms CreateObjectMapping: 0.080000 ms MarkObjects: 1.894400 ms  DeleteObjects: 0.114700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003715 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.907 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3264.
-Total: 2.660600 ms (FindLiveObjects: 0.384600 ms CreateObjectMapping: 0.075200 ms MarkObjects: 2.078800 ms  DeleteObjects: 0.121000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003670 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.953 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3268.
-Total: 2.910900 ms (FindLiveObjects: 0.304400 ms CreateObjectMapping: 0.076600 ms MarkObjects: 2.387200 ms  DeleteObjects: 0.141800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004345 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.002 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3272.
-Total: 2.802500 ms (FindLiveObjects: 0.370300 ms CreateObjectMapping: 0.078100 ms MarkObjects: 2.230800 ms  DeleteObjects: 0.122400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003907 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.911 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3276.
-Total: 2.530100 ms (FindLiveObjects: 0.307700 ms CreateObjectMapping: 0.083300 ms MarkObjects: 2.004200 ms  DeleteObjects: 0.134000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003864 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.921 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.1 MB.
-System memory in use after: 116.2 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3280.
-Total: 2.976200 ms (FindLiveObjects: 0.363500 ms CreateObjectMapping: 0.084500 ms MarkObjects: 2.391700 ms  DeleteObjects: 0.134600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003800 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.913 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3284.
-Total: 2.658600 ms (FindLiveObjects: 0.320800 ms CreateObjectMapping: 0.081100 ms MarkObjects: 2.124200 ms  DeleteObjects: 0.130700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003794 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.949 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3288.
-Total: 2.564500 ms (FindLiveObjects: 0.307200 ms CreateObjectMapping: 0.076600 ms MarkObjects: 2.047600 ms  DeleteObjects: 0.132400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003759 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.938 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3292.
-Total: 2.699000 ms (FindLiveObjects: 0.324900 ms CreateObjectMapping: 0.076700 ms MarkObjects: 2.140700 ms  DeleteObjects: 0.155600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004290 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.045 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3296.
-Total: 2.801400 ms (FindLiveObjects: 0.384000 ms CreateObjectMapping: 0.082500 ms MarkObjects: 2.188500 ms  DeleteObjects: 0.144600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  Time since last request: 7.428535 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png
+  artifactKey: Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png using Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c3a5222937036d9964dc19e3192cfb3') in 0.007296 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8812.918742 seconds.
-  path: Assets/Scripts/MenuUI/UIManager.cs
-  artifactKey: Guid(caf997a6cd5f02c45bd34d44193c5b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MenuUI/UIManager.cs using Guid(caf997a6cd5f02c45bd34d44193c5b72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a9606301db20671b85c7481b6421c45') in 0.038452 seconds
-  Import took 0.043607 seconds .
-
+  Time since last request: 11.735557 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png
+  artifactKey: Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png using Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5379c1d739f3cbb1cb5c5d4f6c2e71a') in 0.017112 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003784 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.933 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3300.
-Total: 2.512800 ms (FindLiveObjects: 0.316600 ms CreateObjectMapping: 0.075200 ms MarkObjects: 1.963600 ms  DeleteObjects: 0.156600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 7.904253 seconds.
+  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png
+  artifactKey: Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png using Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df02881931d82dbd09c3972258d66e02') in 0.016660 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004112 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.944 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3304.
-Total: 2.918600 ms (FindLiveObjects: 0.339200 ms CreateObjectMapping: 0.081300 ms MarkObjects: 2.358100 ms  DeleteObjects: 0.138600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 336.147992 seconds.
+  path: Assets/Sprites/Pixel-Art/testeTile.prefab
+  artifactKey: Guid(37897c128f9d1274ebd24da8e7ae8d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/testeTile.prefab using Guid(37897c128f9d1274ebd24da8e7ae8d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dafe53d6edc913c34d239635560536d') in 0.095695 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004020 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.015 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3308.
-Total: 2.440000 ms (FindLiveObjects: 0.330300 ms CreateObjectMapping: 0.076200 ms MarkObjects: 1.910800 ms  DeleteObjects: 0.121700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 650.366909 seconds.
+  path: Assets/Sprites/Pixel-Art/BG
+  artifactKey: Guid(62ff69e364a81ff40a0e4673e0def18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG using Guid(62ff69e364a81ff40a0e4673e0def18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14180346e6e5aff3e7816b306be9f3a') in 0.002144 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004485 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.988 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3312.
-Total: 2.965200 ms (FindLiveObjects: 0.463100 ms CreateObjectMapping: 0.079300 ms MarkObjects: 2.227100 ms  DeleteObjects: 0.194100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 5.337417 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-01-00.png
+  artifactKey: Guid(91976ac409e0b474aa1dc5bfc9ff28dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-01-00.png using Guid(91976ac409e0b474aa1dc5bfc9ff28dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b39e8fd5481428b69d022426e92520') in 0.025832 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004266 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.001 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3316.
-Total: 2.632500 ms (FindLiveObjects: 0.313600 ms CreateObjectMapping: 0.076500 ms MarkObjects: 2.103200 ms  DeleteObjects: 0.137800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 67.947522 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-01.png
+  artifactKey: Guid(32159ce3cfedda545b4b3a2ba0b86ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-01.png using Guid(32159ce3cfedda545b4b3a2ba0b86ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5495ecbe2c938a56b6f0f8d5d06af92c') in 0.021771 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004000 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.966 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.2 MB.
-System memory in use after: 116.3 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3320.
-Total: 2.525000 ms (FindLiveObjects: 0.356800 ms CreateObjectMapping: 0.078300 ms MarkObjects: 1.975100 ms  DeleteObjects: 0.113700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 48.647529 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-01.png
+  artifactKey: Guid(32159ce3cfedda545b4b3a2ba0b86ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-01.png using Guid(32159ce3cfedda545b4b3a2ba0b86ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da461dca827f97ec92a4457fd5678e3') in 0.035117 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003861 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.968 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3324.
-Total: 2.631300 ms (FindLiveObjects: 0.309900 ms CreateObjectMapping: 0.077200 ms MarkObjects: 2.113400 ms  DeleteObjects: 0.129700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 5807.461475 seconds.
+  path: Assets/Sprites/Pixel-Art/rock-01-a.png
+  artifactKey: Guid(4dc04d29d419ce4488f4c2d480c141c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/rock-01-a.png using Guid(4dc04d29d419ce4488f4c2d480c141c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6662a1070c37db46fd8eaf28f1b15c') in 0.011361 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003943 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.068 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.4 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3328.
-Total: 2.759100 ms (FindLiveObjects: 0.337100 ms CreateObjectMapping: 0.076300 ms MarkObjects: 2.214700 ms  DeleteObjects: 0.130000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 15.268721 seconds.
+  path: Assets/Sprites/Pixel-Art/rock-01-a.png
+  artifactKey: Guid(4dc04d29d419ce4488f4c2d480c141c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/rock-01-a.png using Guid(4dc04d29d419ce4488f4c2d480c141c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5b0416366269bb791c66359f46027c') in 0.009267 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004100 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.990 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.4 MB.
-System memory in use after: 116.5 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3332.
-Total: 2.421700 ms (FindLiveObjects: 0.332700 ms CreateObjectMapping: 0.076700 ms MarkObjects: 1.889500 ms  DeleteObjects: 0.121000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 797.364468 seconds.
+  path: Assets/Sprites/Pixel-Art/rock-01-b.png
+  artifactKey: Guid(a3070357aca1c1941aeb932a9ae373f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/rock-01-b.png using Guid(a3070357aca1c1941aeb932a9ae373f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fe274d25a07b51a0eda9c2ccb93fb3') in 0.009817 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006528 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.000 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.4 MB.
-System memory in use after: 116.5 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3336.
-Total: 2.616700 ms (FindLiveObjects: 0.352300 ms CreateObjectMapping: 0.086000 ms MarkObjects: 2.056700 ms  DeleteObjects: 0.120500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+Received Import Request.
+  Time since last request: 12.580397 seconds.
+  path: Assets/Sprites/Pixel-Art/rock-01-b.png
+  artifactKey: Guid(a3070357aca1c1941aeb932a9ae373f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/rock-01-b.png using Guid(a3070357aca1c1941aeb932a9ae373f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9f58d02bb6020a62d84c18c68bc2f2') in 0.008303 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003882 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.54 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.072 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3340.
-Total: 3.218200 ms (FindLiveObjects: 0.401000 ms CreateObjectMapping: 0.079200 ms MarkObjects: 2.592800 ms  DeleteObjects: 0.143800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+Received Import Request.
+  Time since last request: 11.157047 seconds.
+  path: Assets/Sprites/Pixel-Art/rock-01-b.png
+  artifactKey: Guid(a3070357aca1c1941aeb932a9ae373f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/rock-01-b.png using Guid(a3070357aca1c1941aeb932a9ae373f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d80def4d375f4143ce5c5da0c1b5245') in 0.007931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 570.449679 seconds.
+  path: Assets/Sprites/Pixel-Art/wather-green-01.png
+  artifactKey: Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/wather-green-01.png using Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a19bdc85acc8e4c335a2238cd466bf') in 0.013072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.238750 seconds.
+  path: Assets/Sprites/Pixel-Art/wather-green-01.png
+  artifactKey: Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/wather-green-01.png using Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515fd1ce0c07396705596b2c29678325') in 0.006685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.231710 seconds.
+  path: Assets/Sprites/Pixel-Art/wather-green-01.png
+  artifactKey: Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/wather-green-01.png using Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad53f6fd5a63e1f32037c8dd27d6561c') in 0.013196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.295354 seconds.
+  path: Assets/Sprites/Pixel-Art/wather-green-01.png
+  artifactKey: Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/wather-green-01.png using Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00a920243858b2f8fef460dce9dc9a1d') in 0.014908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.019377 seconds.
+  path: Assets/Sprites/Pixel-Art/wather-green-01.png
+  artifactKey: Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/wather-green-01.png using Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '032b1c6af6d81019045809bf882f9204') in 0.014234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.396173 seconds.
+  path: Assets/Sprites/Pixel-Art/wather-green-01.png
+  artifactKey: Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/wather-green-01.png using Guid(4bb9248f80862a240a24288d9b671263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62bc10d99b6f63419dd8ad5b849a6c7f') in 0.012880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1805.418718 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-02.png
+  artifactKey: Guid(6f3c1fdcbfa7e3543b908f49f7a2c4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-02.png using Guid(6f3c1fdcbfa7e3543b908f49f7a2c4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f659fd8e27c2d358ab6cd23b57dfbf') in 0.020504 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.596102 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-02.png
+  artifactKey: Guid(6f3c1fdcbfa7e3543b908f49f7a2c4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-02.png using Guid(6f3c1fdcbfa7e3543b908f49f7a2c4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af71460e9b8cca755a929108550ccde') in 0.016175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16986.289900 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-03.png
+  artifactKey: Guid(e09858aaab8e72f46baf85442e4380fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-03.png using Guid(e09858aaab8e72f46baf85442e4380fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cca9a662ff46d0aaf12c1eca136c74f') in 0.028404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.929408 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-03.png
+  artifactKey: Guid(e09858aaab8e72f46baf85442e4380fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-03.png using Guid(e09858aaab8e72f46baf85442e4380fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2ee206d5ab5afa5a9d3a88218179067') in 0.016481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1793.117420 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d2c505ff423ae9e19a95d701a9375d') in 0.010677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.751424 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485dcbf185e1be4b38327da2335cd3e7') in 0.011184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.681250 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '013ab19897054cbfc9d0a4ca5f4a8970') in 0.008262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.896318 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795fbb6d0ed95364860e761fbe1726bb') in 0.007509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.839510 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e481b21b99dbc6b4761c5471d25e32') in 0.008096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.777520 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2231889f56306abba2ce26fff2bee6e8') in 0.007989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.540546 seconds.
+  path: Assets/Sprites/Pixel-Art/cogumelo01.png
+  artifactKey: Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/cogumelo01.png using Guid(c9f07d8349ff88b4287cf6587e938582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1da75056f19fc578eee41bf1675180b') in 0.008228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7709.261998 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-03.png
+  artifactKey: Guid(e09858aaab8e72f46baf85442e4380fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-03.png using Guid(e09858aaab8e72f46baf85442e4380fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54fe945de6fc78a2098ef9b68b4d030e') in 0.017801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1139.007648 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-04.png
+  artifactKey: Guid(20937e3f02a6f944b9716eb4ae9f471a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-04.png using Guid(20937e3f02a6f944b9716eb4ae9f471a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca35b12ad74bd275381b571661b8611') in 0.020514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.523639 seconds.
+  path: Assets/Sprites/Pixel-Art/BG/cave-bg-04.png
+  artifactKey: Guid(20937e3f02a6f944b9716eb4ae9f471a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-04.png using Guid(20937e3f02a6f944b9716eb4ae9f471a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a10748a831a8be573569fafc2e517b7') in 0.015716 seconds 
