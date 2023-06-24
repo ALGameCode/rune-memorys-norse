@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/ALGC/PreSystem/SceneSystem/SplashScreen/Scene/SplashScreensScene.unity
+    guid: 8b5c5c117c8f7a8468f025119e4e2bf0
+  - enabled: 1
+    path: Assets/RuneMemory/Scenes/Menu.unity
     guid: 8c54d42d11491514ba200074cbff30ba
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/RuneMemory/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

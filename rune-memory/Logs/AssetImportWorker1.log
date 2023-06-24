@@ -15,7 +15,7 @@ D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-60179
+51562
 Successfully changed project path to: D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
 D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/UnityProjects/Rune-Memory/rune-memorys-norse/rune-memory
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [5624] Host "[IP] 192.168.0.175 [Port] 0 [Flags] 2 [Guid] 3549380806 [EditorId] 3549380806 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F9GHF2T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [23724] Host "[IP] 192.168.0.175 [Port] 0 [Flags] 2 [Guid] 3605232245 [EditorId] 3605232245 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F9GHF2T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [5624] Host "[IP] 192.168.0.175 [Port] 0 [Flags] 2 [Guid] 3549380806 [EditorId] 3549380806 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F9GHF2T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [23724] Host "[IP] 192.168.0.175 [Port] 0 [Flags] 2 [Guid] 3605232245 [EditorId] 3605232245 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F9GHF2T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 74.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 79.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity/Hub/Editor/Editor/Data/Resources/UnitySubsystems
@@ -62,48 +62,48 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
     Vendor:   NVIDIA
     VRAM:     5980 MB
-    Driver:   31.0.15.2802
+    Driver:   31.0.15.3118
 Initialize mono
 Mono path[0] = 'D:/Program Files/Unity/Hub/Editor/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity/Hub/Editor/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Program Files/Unity/Hub/Editor/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.007264 seconds.
+Registered in 0.004841 seconds.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 63.54 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 66.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.640 seconds
+- Completed reload, in  0.615 seconds
 Domain Reload Profiling:
-	ReloadAssembly (640ms)
-		BeginReloadAssembly (98ms)
+	ReloadAssembly (615ms)
+		BeginReloadAssembly (95ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (431ms)
-			LoadAssemblies (100ms)
+		EndReloadAssembly (426ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (111ms)
+			SetupTypeCache (107ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (242ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (246ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (43ms)
+				InitializePlatformSupportModulesInManaged (41ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (64ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (93ms)
+				RefreshPlugins (66ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (96ms)
 				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -111,52 +111,52 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008546 seconds.
+Registered in 0.008009 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 64.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 66.94 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.168 seconds
+- Completed reload, in  1.122 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1169ms)
-		BeginReloadAssembly (145ms)
+	ReloadAssembly (1123ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (921ms)
-			LoadAssemblies (140ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (883ms)
+			LoadAssemblies (131ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (215ms)
+			SetupTypeCache (206ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (487ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (486ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (20ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (64ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (278ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				RefreshPlugins (67ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (270ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 65 unused Assets / (57.3 KB). Loaded Objects now: 3714.
-Memory consumption went from 138.7 MB to 138.6 MB.
-Total: 4.032400 ms (FindLiveObjects: 0.376600 ms CreateObjectMapping: 0.093400 ms MarkObjects: 3.452500 ms  DeleteObjects: 0.108300 ms)
+Unloading 3285 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 65 unused Assets / (57.6 KB). Loaded Objects now: 3725.
+Memory consumption went from 138.8 MB to 138.8 MB.
+Total: 3.548600 ms (FindLiveObjects: 0.376200 ms CreateObjectMapping: 0.086800 ms MarkObjects: 2.999300 ms  DeleteObjects: 0.085300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,31 +170,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1166709.784789 seconds.
-  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png
-  artifactKey: Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png using Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c2bc1c761385be77c3c62dd70c92a03') in 0.151332 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 33.425455 seconds.
-  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png
-  artifactKey: Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png using Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1444889341ed485b587b3f22ef8589fc') in 0.028795 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.117368 seconds.
-  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png
-  artifactKey: Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock-sombra.png using Guid(ab7007a8ba018c647a75dce46e4bb85a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '545617bd500b081c2f1714bae9c84eb5') in 0.023528 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 307.404954 seconds.
-  path: Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png
-  artifactKey: Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Pixel-Art/tile-set-ground-earth-rock.png using Guid(a5ed9db3f2f1c3043b4a58b8bdbb4539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5332ea85da05fbea152d823182402e88') in 0.008453 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1011.642708 seconds.
-  path: Assets/Sprites/Pixel-Art/BG/cave-bg-01.png
-  artifactKey: Guid(32159ce3cfedda545b4b3a2ba0b86ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Pixel-Art/BG/cave-bg-01.png using Guid(32159ce3cfedda545b4b3a2ba0b86ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb54f865b48e0012fcd4cab23f4eed7c') in 0.026954 seconds 
+  Time since last request: 7203.729849 seconds.
+  path: Assets/ALGC/PreSystem/SceneSystem/SplashScreen/Scripts/SplashScreenManager.cs
+  artifactKey: Guid(718808a95d892614097d9944dda11c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALGC/PreSystem/SceneSystem/SplashScreen/Scripts/SplashScreenManager.cs using Guid(718808a95d892614097d9944dda11c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d76469b0adf2e664b5cda3844d877d0') in 0.102190 seconds 
