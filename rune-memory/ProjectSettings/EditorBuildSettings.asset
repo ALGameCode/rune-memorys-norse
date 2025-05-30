@@ -9,9 +9,24 @@ EditorBuildSettings:
     path: Assets/ALGC/PreSystem/SceneSystem/SplashScreen/Scene/SplashScreensScene.unity
     guid: 8b5c5c117c8f7a8468f025119e4e2bf0
   - enabled: 1
-    path: Assets/RuneMemory/Scenes/Menu.unity
-    guid: 8c54d42d11491514ba200074cbff30ba
+    path: Assets/RuneMemory/Scenes/Loading.unity
+    guid: e6042da83545a9645b01527d9c8930be
+  - enabled: 1
+    path: Assets/RuneMemory/Scenes/ServiceTerms.unity
+    guid: 093fad1bfb7019d42a437159167acaeb
+  - enabled: 1
+    path: Assets/RuneMemory/Scenes/Login.unity
+    guid: 592219f75784aa14d8629158a963c0b3
+  - enabled: 1
+    path: Assets/RuneMemory/Scenes/village.unity
+    guid: fffaf3fff93f5f741ae4cb22abd93bf9
+  - enabled: 1
+    path: Assets/RuneMemory/Scenes/LevelSelect.unity
+    guid: 9213385d46988664f9e21e521c5ffd72
   - enabled: 1
     path: Assets/RuneMemory/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/RuneMemory/Scenes/Menu.unity
+    guid: 8c54d42d11491514ba200074cbff30ba
   m_configObjects: {}

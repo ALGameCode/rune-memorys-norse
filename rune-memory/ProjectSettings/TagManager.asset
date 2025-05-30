@@ -42,3 +42,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: water
+    uniqueID: 2155725301
+    locked: 0
+  - name: floor
+    uniqueID: 2688386973
+    locked: 0
+  - name: ground
+    uniqueID: 1482831781
+    locked: 0
+  - name: groundButton
+    uniqueID: 2366575299
+    locked: 0
+  - name: Build
+    uniqueID: 1989893687
+    locked: 0
+  - name: NPC
+    uniqueID: 4171636313
+    locked: 0
+  - name: UI
+    uniqueID: 994031703
+    locked: 0
