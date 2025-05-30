@@ -76,3 +76,9 @@ crashlytics-build.properties
 rune-memory/Library/ArtifactDB~
 
 rune-memory/Library/PackageCache/com.unity.burst@*/.Runtime/hostmac/
+
+rune-memory/Library/
+rune-memory/Temp/
+rune-memory/Logs/
+rune-memory/UserSettings/
+
