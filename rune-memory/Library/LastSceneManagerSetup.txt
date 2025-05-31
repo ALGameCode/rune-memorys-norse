@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/ALGC/PreSystem/SceneSystem/SplashScreen/Scene/SplashScreensScene.unity
+- path: Assets/RuneMemory/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
